@@ -1,0 +1,180 @@
+2025-08-23_01:34:44.28248 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:44.29145 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:44.29262 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:44.29340 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:44.30169 LOG:  database system is shut down
+2025-08-23_01:34:45.36136 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:45.36345 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:45.36373 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:45.36411 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:45.36835 LOG:  database system is shut down
+2025-08-23_01:34:46.42934 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:46.43184 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:46.43216 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:46.43249 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:46.43619 LOG:  database system is shut down
+2025-08-23_01:34:47.52329 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:47.52904 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:47.52968 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:47.53038 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:47.53814 LOG:  database system is shut down
+2025-08-23_01:34:48.79557 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:48.91944 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:48.93340 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:48.94343 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:48.94816 LOG:  database system is shut down
+2025-08-23_01:34:50.17920 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:50.18407 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:50.18480 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:50.18556 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:50.18999 LOG:  database system is shut down
+2025-08-23_01:34:51.26907 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:51.27357 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:51.27429 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:51.27486 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:51.28044 LOG:  database system is shut down
+2025-08-23_01:34:52.39050 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:52.39420 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:52.39481 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:52.39538 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:52.40068 LOG:  database system is shut down
+2025-08-23_01:34:53.46610 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:53.46865 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:53.46903 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:53.46935 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:53.47338 LOG:  database system is shut down
+2025-08-23_01:34:54.57512 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:54.57864 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:54.57911 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:54.57979 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:54.58465 LOG:  database system is shut down
+2025-08-23_01:34:55.71929 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:55.72417 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:55.72486 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:55.72561 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:55.73265 LOG:  database system is shut down
+2025-08-23_01:34:56.80138 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:56.80402 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:56.80442 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:56.80476 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:56.80909 LOG:  database system is shut down
+2025-08-23_01:34:57.90087 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:57.90456 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:57.90507 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:57.90576 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:57.91061 LOG:  database system is shut down
+2025-08-23_01:34:58.96643 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:34:58.96958 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:34:58.97017 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:34:58.97065 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:34:58.97402 LOG:  database system is shut down
+2025-08-23_01:35:00.05445 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:00.05770 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:00.05820 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:00.05866 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:00.06145 LOG:  database system is shut down
+2025-08-23_01:35:01.12382 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:01.12624 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:01.12669 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:01.12709 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:01.13093 LOG:  database system is shut down
+2025-08-23_01:35:02.22290 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:02.22641 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:02.22688 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:02.22739 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:02.23254 LOG:  database system is shut down
+2025-08-23_01:35:03.29367 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:03.29667 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:03.29704 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:03.29738 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:03.30087 LOG:  database system is shut down
+2025-08-23_01:35:04.39983 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:04.40314 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:04.40370 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:04.40422 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:04.41052 LOG:  database system is shut down
+2025-08-23_01:35:05.47847 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:05.48133 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:05.48165 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:05.48204 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:05.48533 LOG:  database system is shut down
+2025-08-23_01:35:06.58656 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:06.59184 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:06.59249 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:06.59303 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:06.59961 LOG:  database system is shut down
+2025-08-23_01:35:07.67363 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:07.67669 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:07.67718 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:07.67764 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:07.68135 LOG:  database system is shut down
+2025-08-23_01:35:08.80048 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:08.80352 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:08.80397 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:08.80442 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:08.80824 LOG:  database system is shut down
+2025-08-23_01:35:09.87717 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:09.88036 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:09.88092 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:09.88155 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:09.88492 LOG:  database system is shut down
+2025-08-23_01:35:10.94639 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:10.94910 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:10.94953 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:10.94992 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:10.95378 LOG:  database system is shut down
+2025-08-23_01:35:12.02007 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:12.02334 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:12.02370 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:12.02414 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:12.02717 LOG:  database system is shut down
+2025-08-23_01:35:13.18886 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:13.19271 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:13.19324 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:13.19366 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:13.19995 LOG:  database system is shut down
+2025-08-23_01:35:14.26547 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:14.26811 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:14.26846 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:14.26880 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:14.27291 LOG:  database system is shut down
+2025-08-23_01:35:15.35317 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:15.35714 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:15.35773 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:15.35832 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:15.36282 LOG:  database system is shut down
+2025-08-23_01:35:16.42081 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:16.42350 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:16.42382 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:16.42411 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:16.42750 LOG:  database system is shut down
+2025-08-23_01:35:17.51004 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:17.51344 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:17.51395 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:17.51436 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:17.52025 LOG:  database system is shut down
+2025-08-23_01:35:18.58055 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:18.58307 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:18.58361 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:18.58459 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:18.58808 LOG:  database system is shut down
+2025-08-23_01:35:19.69503 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:19.70017 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:19.70218 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:19.70460 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:19.70860 LOG:  database system is shut down
+2025-08-23_01:35:20.78017 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:20.78321 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:20.78360 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:20.78397 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:20.78712 LOG:  database system is shut down
+2025-08-23_01:35:21.87195 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:21.87424 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:21.87456 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:21.87485 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:21.87849 LOG:  database system is shut down
+2025-08-23_01:35:22.96680 LOG:  starting PostgreSQL 16.8 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2025-08-23_01:35:22.97146 LOG:  could not set permissions of file "/var/opt/gitlab/postgresql/.s.PGSQL.5432": Invalid argument
+2025-08-23_01:35:22.97200 WARNING:  could not create Unix-domain socket in directory "/var/opt/gitlab/postgresql"
+2025-08-23_01:35:22.97283 FATAL:  could not create any Unix-domain sockets
+2025-08-23_01:35:22.97780 LOG:  database system is shut down

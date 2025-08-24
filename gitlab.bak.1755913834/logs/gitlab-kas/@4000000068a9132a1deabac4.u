@@ -1,0 +1,63 @@
+2025-08-23_01:01:00.56121 {"time":"2025-08-23T01:01:00.558962583Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:00.56753 {"time":"2025-08-23T01:01:00.566996525Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:00.57900 {"time":"2025-08-23T01:01:00.56706047Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:01.94451 {"time":"2025-08-23T01:01:01.944373713Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:01.94699 {"time":"2025-08-23T01:01:01.946870058Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:01.94753 {"time":"2025-08-23T01:01:01.946916792Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:03.45146 {"time":"2025-08-23T01:01:03.451292098Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:03.45349 {"time":"2025-08-23T01:01:03.453359185Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:03.45392 {"time":"2025-08-23T01:01:03.453404283Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:04.88473 {"time":"2025-08-23T01:01:04.884573392Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:04.88858 {"time":"2025-08-23T01:01:04.888329635Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:04.88911 {"time":"2025-08-23T01:01:04.888415189Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:06.24866 {"time":"2025-08-23T01:01:06.248516251Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:06.25060 {"time":"2025-08-23T01:01:06.250397277Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:06.25109 {"time":"2025-08-23T01:01:06.250496271Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:07.67710 {"time":"2025-08-23T01:01:07.676946416Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:07.67916 {"time":"2025-08-23T01:01:07.67904305Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:07.68005 {"time":"2025-08-23T01:01:07.679094338Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:09.13860 {"time":"2025-08-23T01:01:09.138467559Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:09.14086 {"time":"2025-08-23T01:01:09.140755372Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:09.14158 {"time":"2025-08-23T01:01:09.140835031Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:10.56167 {"time":"2025-08-23T01:01:10.561570454Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:10.56343 {"time":"2025-08-23T01:01:10.563310268Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:10.56371 {"time":"2025-08-23T01:01:10.563354355Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:11.88749 {"time":"2025-08-23T01:01:11.887340065Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:11.88911 {"time":"2025-08-23T01:01:11.88899137Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:11.88962 {"time":"2025-08-23T01:01:11.889036066Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:13.38771 {"time":"2025-08-23T01:01:13.387571983Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:13.39154 {"time":"2025-08-23T01:01:13.391360546Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:13.39244 {"time":"2025-08-23T01:01:13.391445183Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:14.82159 {"time":"2025-08-23T01:01:14.821539919Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:14.82409 {"time":"2025-08-23T01:01:14.823983767Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:14.82463 {"time":"2025-08-23T01:01:14.824037553Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:16.32454 {"time":"2025-08-23T01:01:16.324349766Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:16.32669 {"time":"2025-08-23T01:01:16.326511925Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:16.32719 {"time":"2025-08-23T01:01:16.326645253Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:17.68395 {"time":"2025-08-23T01:01:17.683809377Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:17.68563 {"time":"2025-08-23T01:01:17.685505489Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:17.68627 {"time":"2025-08-23T01:01:17.685545385Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:18.97510 {"time":"2025-08-23T01:01:18.974952036Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:18.97680 {"time":"2025-08-23T01:01:18.976677753Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:18.97725 {"time":"2025-08-23T01:01:18.976718083Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:20.52018 {"time":"2025-08-23T01:01:20.519937925Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:20.52586 {"time":"2025-08-23T01:01:20.525202108Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:20.52651 {"time":"2025-08-23T01:01:20.525318374Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:22.01406 {"time":"2025-08-23T01:01:22.01398741Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:22.02052 {"time":"2025-08-23T01:01:22.020320121Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:22.02132 {"time":"2025-08-23T01:01:22.020424545Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:23.32074 {"time":"2025-08-23T01:01:23.320582002Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:23.32226 {"time":"2025-08-23T01:01:23.322139812Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:23.32265 {"time":"2025-08-23T01:01:23.322175226Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:24.76793 {"time":"2025-08-23T01:01:24.767777863Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:24.77002 {"time":"2025-08-23T01:01:24.76987534Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:24.77078 {"time":"2025-08-23T01:01:24.769927161Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:26.09703 {"time":"2025-08-23T01:01:26.096939577Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:26.09865 {"time":"2025-08-23T01:01:26.098544349Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:26.09918 {"time":"2025-08-23T01:01:26.098585138Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:27.65818 {"time":"2025-08-23T01:01:27.657956398Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:27.66097 {"time":"2025-08-23T01:01:27.660711447Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:27.66162 {"time":"2025-08-23T01:01:27.660753339Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}
+2025-08-23_01:01:29.15676 {"time":"2025-08-23T01:01:29.156609727Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:01:29.16007 {"time":"2025-08-23T01:01:29.159902698Z","level":"INFO","msg":"KAS shutdown done, exiting"}
+2025-08-23_01:01:29.16068 {"time":"2025-08-23T01:01:29.159964539Z","level":"ERROR","msg":"Program aborted","error":"redis client: dial unix /var/opt/gitlab/redis/redis.socket: connect: operation not supported"}

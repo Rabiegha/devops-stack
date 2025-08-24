@@ -1,0 +1,11 @@
+{"level":"info","msg":"Wrapper started","pid":296,"time":"2025-08-23T01:38:05.093Z","wrapper":296}
+{"level":"info","msg":"finding process","pid":296,"pid_file":"/var/opt/gitlab/gitaly/gitaly.pid","time":"2025-08-23T01:38:05.093Z","wrapper":296}
+{"error":"open /var/opt/gitlab/gitaly/gitaly.pid: no such file or directory","level":"error","msg":"find process","pid":296,"time":"2025-08-23T01:38:05.094Z","wrapper":296}
+{"level":"info","msg":"spawning a process","pid":296,"time":"2025-08-23T01:38:05.094Z","wrapper":296}
+{"level":"info","msg":"monitoring process","pid":296,"process":303,"time":"2025-08-23T01:38:05.095Z","wrapper":296}
+{"level":"warning","msg":"The current configurations will cause Gitaly to fail to start up in future versions. Please run 'gitaly configuration validate \u003c /var/opt/gitlab/gitaly/config.toml' and fix the errors that are printed.","pid":303,"time":"2025-08-23T01:38:05.367Z"}
+{"level":"info","msg":"maxprocs: Leaving GOMAXPROCS=12: CPU quota undefined","pid":303,"time":"2025-08-23T01:38:05.367Z"}
+{"latencies":[0.001,0.005,0.025,0.1,0.5,1,10,30,60,300,1500],"level":"info","msg":"grpc prometheus histograms enabled","pid":303,"time":"2025-08-23T01:38:05.367Z"}
+{"level":"info","msg":"Starting Gitaly","pid":303,"time":"2025-08-23T01:38:05.367Z","version":"18.3.0"}
+{"level":"info","msg":"removed leftover gitaly process directory","path":"/var/opt/gitlab/gitaly/run/gitaly-1318","pid":303,"time":"2025-08-23T01:38:05.381Z"}
+{"duration_ms":0,"level":"info","msg":"finished initializing cgroups","pid":303,"time":"2025-08-23T01:38:05.388Z"}

@@ -1,0 +1,1 @@
+2025-08-23_01:21:28.43427 {"time":"2025-08-23T01:21:28.434093461Z","level":"ERROR","msg":"Failed to get receptive agents","mod_name":"kas2agentk_tunnel","error":"Get \"http://gitlab.local/api/v4/internal/kubernetes/receptive_agents\": dial tcp 127.0.0.1:80: connect: connection refused"}

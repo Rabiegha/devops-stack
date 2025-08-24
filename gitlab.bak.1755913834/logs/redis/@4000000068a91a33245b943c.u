@@ -1,0 +1,26 @@
+2025-08-23_01:31:26.38390 282:C 23 Aug 2025 01:31:26.383 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:31:26.38414 282:C 23 Aug 2025 01:31:26.383 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:31:26.38454 282:C 23 Aug 2025 01:31:26.383 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=282, just started
+2025-08-23_01:31:26.38488 282:C 23 Aug 2025 01:31:26.383 * Configuration loaded
+2025-08-23_01:31:26.38507 282:M 23 Aug 2025 01:31:26.384 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:31:26.38526 282:M 23 Aug 2025 01:31:26.384 # Failed to write PID file: Permission denied
+2025-08-23_01:31:26.38568                 _._                                                  
+2025-08-23_01:31:26.38588            _.-``__ ''-._                                             
+2025-08-23_01:31:26.38612       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:31:26.38643   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:31:26.38664  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:31:26.38676  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:31:26.38690  |    `-._   `._    /     _.-'    |     PID: 282
+2025-08-23_01:31:26.38702   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:31:26.38716  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:31:26.38729  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:31:26.38753   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:31:26.38765  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:31:26.38781  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:31:26.38791   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:31:26.38800       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:31:26.38809           `-._        _.-'                                           
+2025-08-23_01:31:26.38818               `-.__.-'                                               
+2025-08-23_01:31:26.38827 
+2025-08-23_01:31:26.38848 282:M 23 Aug 2025 01:31:26.386 * Server initialized
+2025-08-23_01:31:26.38858 282:M 23 Aug 2025 01:31:26.386 * Ready to accept connections unix

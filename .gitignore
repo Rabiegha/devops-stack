@@ -1,0 +1,9 @@
+data/
+.git-credentials
+.env
+*.log
+node_modules
+
+gitlab/
+jenkins/
+traefik/

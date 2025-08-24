@@ -1,0 +1,93 @@
+version: "3.9"
+
+networks:
+  ci_net:
+    driver: bridge
+
+services:
+  traefik:
+    image: traefik:v2.11
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --providers.docker.network=devops-stack_ci_net 
+      # Tu peux garder websecure + ACME pour plus tard, mais inutile en .local
+      - --api.insecure=true
+      - --entrypoints.web.address=:80 # pour debug
+    ports:
+      - "80:80"
+      - "8080:8080" # pour debug
+    volumes:
+      - ./traefik/acme.json:/letsencrypt/acme.json
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks: [ci_net]
+
+  gitlab:
+    platform: linux/amd64          # indispensable sur Mac Apple Silicon
+    shm_size: "1g"
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    hostname: ${GITLAB_HOST}
+    restart: unless-stopped
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://${GITLAB_HOST}'
+        gitlab_rails['gitlab_ssh_host'] = '${GITLAB_HOST}'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2222
+        registry_external_url 'http://${REGISTRY_HOST}'
+        gitlab_rails['registry_enabled'] = true
+        registry['enable'] = true
+        registry_nginx['listen_port'] = 5050
+        registry_nginx['listen_https'] = false 
+    ports:
+      - "2222:22"   # SSH GitLab (git@...:2222)
+      # (optionnel pour debug direct UI)
+      - "8081:80"
+    volumes:
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=devops-stack_ci_net" 
+
+      # Désactive le service auto pour éviter le conflit
+      - "traefik.http.services.gitlab.loadbalancer.server.port=0"
+      # GitLab Web en HTTP (local)
+      - "traefik.http.routers.gitlab.rule=Host(`${GITLAB_HOST}`)"
+      - "traefik.http.routers.gitlab.entrypoints=web"
+      - "traefik.http.routers.gitlab.service=gitlab-web"
+      - "traefik.http.services.gitlab-web.loadbalancer.server.port=80"
+      # GitLab Registry en HTTP (local)
+      - "traefik.http.routers.gitlab-reg.rule=Host(`${REGISTRY_HOST}`)"
+      - "traefik.http.routers.gitlab-reg.entrypoints=web"
+      - "traefik.http.routers.gitlab-reg.service=gitlab-registry"
+      - "traefik.http.services.gitlab-registry.loadbalancer.server.port=5050"
+    networks: [ci_net]
+
+  jenkins:
+    platform: linux/amd64
+    build: ./jenkins
+    container_name: jenkins
+    restart: unless-stopped
+    user: "0:0"
+    environment:
+      - JENKINS_OPTS=--prefix=/
+    volumes:
+      - ./data/jenkins:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=devops-stack_ci_net" 
+      - "traefik.http.routers.jenkins.rule=Host(`${JENKINS_HOST}`)"
+      - "traefik.http.routers.jenkins.entrypoints=web"
+      - "traefik.http.services.jenkins.loadbalancer.server.port=8080"
+    networks: [ci_net]
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:

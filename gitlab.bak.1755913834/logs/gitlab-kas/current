@@ -1,0 +1,15 @@
+2025-08-23_01:45:07.95806 {"time":"2025-08-23T01:45:07.957610254Z","level":"INFO","msg":"Running KAS","kas":"gitlab-kas/v18.3.0/v18.3.0"}
+2025-08-23_01:45:07.96601 {"time":"2025-08-23T01:45:07.965912484Z","level":"INFO","msg":"Using own private API multi URL","url":"grpc:/localhost/|8155"}
+2025-08-23_01:45:07.96904 {"time":"2025-08-23T01:45:07.96895468Z","level":"INFO","msg":"AutoFlow module is not enabled in config","mod_name":"autoflow"}
+2025-08-23_01:45:07.96956 {"time":"2025-08-23T01:45:07.969017708Z","level":"INFO","msg":"AutoFlow module is not enabled in config, not starting codec server","mod_name":"autoflow_codec_server"}
+2025-08-23_01:45:07.97135 {"time":"2025-08-23T01:45:07.971110213Z","level":"INFO","msg":"Starting","mod_name":"observability"}
+2025-08-23_01:45:07.97232 {"time":"2025-08-23T01:45:07.971208697Z","level":"INFO","msg":"Starting","mod_name":"usage_metrics"}
+2025-08-23_01:45:07.97318 {"time":"2025-08-23T01:45:07.971246406Z","level":"INFO","msg":"Starting","mod_name":"notifications"}
+2025-08-23_01:45:07.97378 {"time":"2025-08-23T01:45:07.971320899Z","level":"INFO","msg":"Starting","mod_name":"event_tracker"}
+2025-08-23_01:45:07.97431 {"time":"2025-08-23T01:45:07.972972868Z","level":"INFO","msg":"Starting","mod_name":"kubernetes_api"}
+2025-08-23_01:45:07.97513 {"time":"2025-08-23T01:45:07.973087047Z","level":"INFO","msg":"Starting","mod_name":"kas2agentk_tunnel"}
+2025-08-23_01:45:07.98002 {"time":"2025-08-23T01:45:07.979638485Z","level":"INFO","msg":"API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8153"}
+2025-08-23_01:45:07.98096 {"time":"2025-08-23T01:45:07.979853375Z","level":"INFO","msg":"Agentk API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8150","is_websocket":true}
+2025-08-23_01:45:07.98184 {"time":"2025-08-23T01:45:07.980774634Z","level":"INFO","msg":"Kubernetes API endpoint is up","mod_name":"kubernetes_api","net_network":"tcp","net_address":"127.0.0.1:8154"}
+2025-08-23_01:45:07.98242 {"time":"2025-08-23T01:45:07.980864242Z","level":"INFO","msg":"Observability endpoint is up","mod_name":"observability","net_network":"tcp","net_address":"127.0.0.1:8151"}
+2025-08-23_01:45:07.98318 {"time":"2025-08-23T01:45:07.980911435Z","level":"INFO","msg":"Private API endpoint is up","net_network":"tcp","net_address":"127.0.0.1:8155"}

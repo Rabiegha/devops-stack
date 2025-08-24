@@ -1,0 +1,1400 @@
+2025-08-23_01:18:51.64782 279:C 23 Aug 2025 01:18:51.647 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:51.64821 279:C 23 Aug 2025 01:18:51.647 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:51.64850 279:C 23 Aug 2025 01:18:51.647 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=279, just started
+2025-08-23_01:18:51.64888 279:C 23 Aug 2025 01:18:51.647 * Configuration loaded
+2025-08-23_01:18:51.64917 279:M 23 Aug 2025 01:18:51.648 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:51.64947 279:M 23 Aug 2025 01:18:51.648 # Failed to write PID file: Permission denied
+2025-08-23_01:18:51.64976                 _._                                                  
+2025-08-23_01:18:51.65011            _.-``__ ''-._                                             
+2025-08-23_01:18:51.65042       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:51.65069   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:51.65099  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:51.65133  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:51.65161  |    `-._   `._    /     _.-'    |     PID: 279
+2025-08-23_01:18:51.65195   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:51.65220  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:51.65245  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:51.65288   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:51.65329  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:51.65362  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:51.65408   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:51.65461       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:51.65520           `-._        _.-'                                           
+2025-08-23_01:18:51.65594               `-.__.-'                                               
+2025-08-23_01:18:51.65634 
+2025-08-23_01:18:51.65670 279:M 23 Aug 2025 01:18:51.649 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:52.66261 281:C 23 Aug 2025 01:18:52.662 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:52.66305 281:C 23 Aug 2025 01:18:52.662 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:52.66353 281:C 23 Aug 2025 01:18:52.662 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=281, just started
+2025-08-23_01:18:52.66401 281:C 23 Aug 2025 01:18:52.662 * Configuration loaded
+2025-08-23_01:18:52.66443 281:M 23 Aug 2025 01:18:52.662 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:52.66488 281:M 23 Aug 2025 01:18:52.663 # Failed to write PID file: Permission denied
+2025-08-23_01:18:52.66528                 _._                                                  
+2025-08-23_01:18:52.66568            _.-``__ ''-._                                             
+2025-08-23_01:18:52.66608       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:52.66641   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:52.66690  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:52.66723  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:52.66752  |    `-._   `._    /     _.-'    |     PID: 281
+2025-08-23_01:18:52.66783   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:52.66812  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:52.66841  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:52.66870   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:52.66901  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:52.66930  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:52.66958   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:52.66994       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:52.67026           `-._        _.-'                                           
+2025-08-23_01:18:52.67062               `-.__.-'                                               
+2025-08-23_01:18:52.67093 
+2025-08-23_01:18:52.67123 281:M 23 Aug 2025 01:18:52.663 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:53.67303 286:C 23 Aug 2025 01:18:53.672 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:53.67334 286:C 23 Aug 2025 01:18:53.673 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:53.67357 286:C 23 Aug 2025 01:18:53.673 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=286, just started
+2025-08-23_01:18:53.67407 286:C 23 Aug 2025 01:18:53.673 * Configuration loaded
+2025-08-23_01:18:53.67436 286:M 23 Aug 2025 01:18:53.673 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:53.67468 286:M 23 Aug 2025 01:18:53.673 # Failed to write PID file: Permission denied
+2025-08-23_01:18:53.67511                 _._                                                  
+2025-08-23_01:18:53.67538            _.-``__ ''-._                                             
+2025-08-23_01:18:53.67596       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:53.67635   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:53.67662  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:53.67698  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:53.67728  |    `-._   `._    /     _.-'    |     PID: 286
+2025-08-23_01:18:53.67752   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:53.67773  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:53.67807  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:53.67826   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:53.67846  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:53.67865  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:53.67894   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:53.67920       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:53.67942           `-._        _.-'                                           
+2025-08-23_01:18:53.67963               `-.__.-'                                               
+2025-08-23_01:18:53.67987 
+2025-08-23_01:18:53.68010 286:M 23 Aug 2025 01:18:53.674 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:54.68688 289:C 23 Aug 2025 01:18:54.686 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:54.68753 289:C 23 Aug 2025 01:18:54.686 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:54.68795 289:C 23 Aug 2025 01:18:54.686 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=289, just started
+2025-08-23_01:18:54.68848 289:C 23 Aug 2025 01:18:54.686 * Configuration loaded
+2025-08-23_01:18:54.68897 289:M 23 Aug 2025 01:18:54.687 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:54.68943 289:M 23 Aug 2025 01:18:54.687 # Failed to write PID file: Permission denied
+2025-08-23_01:18:54.68989                 _._                                                  
+2025-08-23_01:18:54.69032            _.-``__ ''-._                                             
+2025-08-23_01:18:54.69075       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:54.69110   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:54.69140  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:54.69171  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:54.69205  |    `-._   `._    /     _.-'    |     PID: 289
+2025-08-23_01:18:54.69235   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:54.69263  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:54.69295  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:54.69324   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:54.69352  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:54.69381  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:54.69413   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:54.69440       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:54.69472           `-._        _.-'                                           
+2025-08-23_01:18:54.69502               `-.__.-'                                               
+2025-08-23_01:18:54.69529 
+2025-08-23_01:18:54.69555 289:M 23 Aug 2025 01:18:54.688 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:55.69946 291:C 23 Aug 2025 01:18:55.699 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:55.69993 291:C 23 Aug 2025 01:18:55.699 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:55.70033 291:C 23 Aug 2025 01:18:55.699 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=291, just started
+2025-08-23_01:18:55.70085 291:C 23 Aug 2025 01:18:55.699 * Configuration loaded
+2025-08-23_01:18:55.70134 291:M 23 Aug 2025 01:18:55.699 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:55.70190 291:M 23 Aug 2025 01:18:55.700 # Failed to write PID file: Permission denied
+2025-08-23_01:18:55.70240                 _._                                                  
+2025-08-23_01:18:55.70283            _.-``__ ''-._                                             
+2025-08-23_01:18:55.70330       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:55.70370   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:55.70422  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:55.70450  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:55.70481  |    `-._   `._    /     _.-'    |     PID: 291
+2025-08-23_01:18:55.70510   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:55.70552  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:55.70582  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:55.70608   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:55.70634  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:55.70664  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:55.70695   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:55.70724       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:55.70755           `-._        _.-'                                           
+2025-08-23_01:18:55.70785               `-.__.-'                                               
+2025-08-23_01:18:55.70820 
+2025-08-23_01:18:55.70846 291:M 23 Aug 2025 01:18:55.700 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:56.71403 293:C 23 Aug 2025 01:18:56.713 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:56.71444 293:C 23 Aug 2025 01:18:56.713 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:56.71483 293:C 23 Aug 2025 01:18:56.713 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=293, just started
+2025-08-23_01:18:56.71515 293:C 23 Aug 2025 01:18:56.713 * Configuration loaded
+2025-08-23_01:18:56.71557 293:M 23 Aug 2025 01:18:56.714 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:56.71599 293:M 23 Aug 2025 01:18:56.714 # Failed to write PID file: Permission denied
+2025-08-23_01:18:56.71634                 _._                                                  
+2025-08-23_01:18:56.71672            _.-``__ ''-._                                             
+2025-08-23_01:18:56.71706       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:56.71735   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:56.71771  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:56.71803  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:56.71829  |    `-._   `._    /     _.-'    |     PID: 293
+2025-08-23_01:18:56.71856   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:56.71894  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:56.71922  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:56.71948   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:56.71981  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:56.72015  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:56.72041   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:56.72075       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:56.72108           `-._        _.-'                                           
+2025-08-23_01:18:56.72136               `-.__.-'                                               
+2025-08-23_01:18:56.72161 
+2025-08-23_01:18:56.72189 293:M 23 Aug 2025 01:18:56.715 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:57.72882 295:C 23 Aug 2025 01:18:57.728 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:57.72940 295:C 23 Aug 2025 01:18:57.728 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:57.72978 295:C 23 Aug 2025 01:18:57.728 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=295, just started
+2025-08-23_01:18:57.73015 295:C 23 Aug 2025 01:18:57.728 * Configuration loaded
+2025-08-23_01:18:57.73052 295:M 23 Aug 2025 01:18:57.729 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:57.73100 295:M 23 Aug 2025 01:18:57.729 # Failed to write PID file: Permission denied
+2025-08-23_01:18:57.73133                 _._                                                  
+2025-08-23_01:18:57.73169            _.-``__ ''-._                                             
+2025-08-23_01:18:57.73200       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:57.73228   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:57.73255  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:57.73293  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:57.73320  |    `-._   `._    /     _.-'    |     PID: 295
+2025-08-23_01:18:57.73349   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:57.73376  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:57.73408  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:57.73436   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:57.73464  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:57.73491  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:57.73514   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:57.73538       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:57.73562           `-._        _.-'                                           
+2025-08-23_01:18:57.73590               `-.__.-'                                               
+2025-08-23_01:18:57.73618 
+2025-08-23_01:18:57.73642 295:M 23 Aug 2025 01:18:57.729 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:58.74222 297:C 23 Aug 2025 01:18:58.742 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:58.74267 297:C 23 Aug 2025 01:18:58.742 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:58.74313 297:C 23 Aug 2025 01:18:58.742 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=297, just started
+2025-08-23_01:18:58.74357 297:C 23 Aug 2025 01:18:58.742 * Configuration loaded
+2025-08-23_01:18:58.74404 297:M 23 Aug 2025 01:18:58.742 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:58.74451 297:M 23 Aug 2025 01:18:58.742 # Failed to write PID file: Permission denied
+2025-08-23_01:18:58.74496                 _._                                                  
+2025-08-23_01:18:58.74533            _.-``__ ''-._                                             
+2025-08-23_01:18:58.74585       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:58.74623   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:58.74677  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:58.74708  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:58.74744  |    `-._   `._    /     _.-'    |     PID: 297
+2025-08-23_01:18:58.74796   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:58.74829  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:58.74858  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:58.74889   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:58.74925  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:58.74956  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:58.74993   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:58.75022       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:58.75050           `-._        _.-'                                           
+2025-08-23_01:18:58.75077               `-.__.-'                                               
+2025-08-23_01:18:58.75107 
+2025-08-23_01:18:58.75138 297:M 23 Aug 2025 01:18:58.743 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:18:59.75683 299:C 23 Aug 2025 01:18:59.756 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:18:59.75733 299:C 23 Aug 2025 01:18:59.756 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:18:59.75779 299:C 23 Aug 2025 01:18:59.756 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=299, just started
+2025-08-23_01:18:59.75822 299:C 23 Aug 2025 01:18:59.756 * Configuration loaded
+2025-08-23_01:18:59.75866 299:M 23 Aug 2025 01:18:59.757 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:18:59.75908 299:M 23 Aug 2025 01:18:59.757 # Failed to write PID file: Permission denied
+2025-08-23_01:18:59.75955                 _._                                                  
+2025-08-23_01:18:59.75998            _.-``__ ''-._                                             
+2025-08-23_01:18:59.76039       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:18:59.76077   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:18:59.76118  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:18:59.76162  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:18:59.76200  |    `-._   `._    /     _.-'    |     PID: 299
+2025-08-23_01:18:59.76234   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:18:59.76265  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:59.76295  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:18:59.76322   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:59.76350  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:18:59.76386  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:18:59.76416   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:18:59.76453       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:18:59.76490           `-._        _.-'                                           
+2025-08-23_01:18:59.76518               `-.__.-'                                               
+2025-08-23_01:18:59.76546 
+2025-08-23_01:18:59.76572 299:M 23 Aug 2025 01:18:59.758 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:00.76927 301:C 23 Aug 2025 01:19:00.769 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:00.76988 301:C 23 Aug 2025 01:19:00.769 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:00.77031 301:C 23 Aug 2025 01:19:00.769 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=301, just started
+2025-08-23_01:19:00.77074 301:C 23 Aug 2025 01:19:00.769 * Configuration loaded
+2025-08-23_01:19:00.77112 301:M 23 Aug 2025 01:19:00.769 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:00.77150 301:M 23 Aug 2025 01:19:00.769 # Failed to write PID file: Permission denied
+2025-08-23_01:19:00.77185                 _._                                                  
+2025-08-23_01:19:00.77219            _.-``__ ''-._                                             
+2025-08-23_01:19:00.77252       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:00.77284   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:00.77310  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:00.77334  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:00.77357  |    `-._   `._    /     _.-'    |     PID: 301
+2025-08-23_01:19:00.77380   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:00.77405  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:00.77429  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:00.77453   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:00.77477  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:00.77505  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:00.77532   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:00.77568       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:00.77595           `-._        _.-'                                           
+2025-08-23_01:19:00.77628               `-.__.-'                                               
+2025-08-23_01:19:00.77655 
+2025-08-23_01:19:00.77681 301:M 23 Aug 2025 01:19:00.770 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:01.78205 303:C 23 Aug 2025 01:19:01.781 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:01.78249 303:C 23 Aug 2025 01:19:01.782 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:01.78291 303:C 23 Aug 2025 01:19:01.782 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=303, just started
+2025-08-23_01:19:01.78333 303:C 23 Aug 2025 01:19:01.782 * Configuration loaded
+2025-08-23_01:19:01.78370 303:M 23 Aug 2025 01:19:01.782 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:01.78412 303:M 23 Aug 2025 01:19:01.782 # Failed to write PID file: Permission denied
+2025-08-23_01:19:01.78448                 _._                                                  
+2025-08-23_01:19:01.78485            _.-``__ ''-._                                             
+2025-08-23_01:19:01.78521       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:01.78553   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:01.78608  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:01.78640  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:01.78669  |    `-._   `._    /     _.-'    |     PID: 303
+2025-08-23_01:19:01.78700   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:01.78731  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:01.78759  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:01.78790   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:01.78821  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:01.78851  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:01.78884   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:01.78915       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:01.78943           `-._        _.-'                                           
+2025-08-23_01:19:01.78970               `-.__.-'                                               
+2025-08-23_01:19:01.79001 
+2025-08-23_01:19:01.79030 303:M 23 Aug 2025 01:19:01.783 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:02.79618 305:C 23 Aug 2025 01:19:02.796 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:02.79667 305:C 23 Aug 2025 01:19:02.796 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:02.79707 305:C 23 Aug 2025 01:19:02.796 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=305, just started
+2025-08-23_01:19:02.79750 305:C 23 Aug 2025 01:19:02.796 * Configuration loaded
+2025-08-23_01:19:02.79796 305:M 23 Aug 2025 01:19:02.796 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:02.79836 305:M 23 Aug 2025 01:19:02.796 # Failed to write PID file: Permission denied
+2025-08-23_01:19:02.79875                 _._                                                  
+2025-08-23_01:19:02.79908            _.-``__ ''-._                                             
+2025-08-23_01:19:02.79944       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:02.79982   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:02.80019  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:02.80055  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:02.80089  |    `-._   `._    /     _.-'    |     PID: 305
+2025-08-23_01:19:02.80120   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:02.80149  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:02.80177  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:02.80206   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:02.80235  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:02.80260  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:02.80287   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:02.80323       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:02.80349           `-._        _.-'                                           
+2025-08-23_01:19:02.80373               `-.__.-'                                               
+2025-08-23_01:19:02.80402 
+2025-08-23_01:19:02.80427 305:M 23 Aug 2025 01:19:02.797 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:03.81149 307:C 23 Aug 2025 01:19:03.811 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:03.81217 307:C 23 Aug 2025 01:19:03.811 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:03.81271 307:C 23 Aug 2025 01:19:03.811 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=307, just started
+2025-08-23_01:19:03.81312 307:C 23 Aug 2025 01:19:03.811 * Configuration loaded
+2025-08-23_01:19:03.81357 307:M 23 Aug 2025 01:19:03.811 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:03.81402 307:M 23 Aug 2025 01:19:03.812 # Failed to write PID file: Permission denied
+2025-08-23_01:19:03.81441                 _._                                                  
+2025-08-23_01:19:03.81487            _.-``__ ''-._                                             
+2025-08-23_01:19:03.81526       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:03.81562   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:03.81602  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:03.81634  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:03.81663  |    `-._   `._    /     _.-'    |     PID: 307
+2025-08-23_01:19:03.81691   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:03.81728  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:03.81758  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:03.81791   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:03.81820  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:03.81852  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:03.81885   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:03.81918       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:03.81953           `-._        _.-'                                           
+2025-08-23_01:19:03.81986               `-.__.-'                                               
+2025-08-23_01:19:03.82022 
+2025-08-23_01:19:03.82055 307:M 23 Aug 2025 01:19:03.812 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:04.82571 309:C 23 Aug 2025 01:19:04.825 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:04.82633 309:C 23 Aug 2025 01:19:04.825 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:04.82676 309:C 23 Aug 2025 01:19:04.825 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=309, just started
+2025-08-23_01:19:04.82718 309:C 23 Aug 2025 01:19:04.825 * Configuration loaded
+2025-08-23_01:19:04.82759 309:M 23 Aug 2025 01:19:04.825 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:04.82797 309:M 23 Aug 2025 01:19:04.826 # Failed to write PID file: Permission denied
+2025-08-23_01:19:04.82843                 _._                                                  
+2025-08-23_01:19:04.82881            _.-``__ ''-._                                             
+2025-08-23_01:19:04.82925       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:04.82956   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:04.82989  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:04.83037  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:04.83069  |    `-._   `._    /     _.-'    |     PID: 309
+2025-08-23_01:19:04.83106   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:04.83139  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:04.83168  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:04.83197   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:04.83227  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:04.83256  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:04.83290   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:04.83327       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:04.83357           `-._        _.-'                                           
+2025-08-23_01:19:04.83387               `-.__.-'                                               
+2025-08-23_01:19:04.83421 
+2025-08-23_01:19:04.83454 309:M 23 Aug 2025 01:19:04.826 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:05.84047 311:C 23 Aug 2025 01:19:05.840 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:05.84094 311:C 23 Aug 2025 01:19:05.840 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:05.84139 311:C 23 Aug 2025 01:19:05.840 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=311, just started
+2025-08-23_01:19:05.84183 311:C 23 Aug 2025 01:19:05.840 * Configuration loaded
+2025-08-23_01:19:05.84223 311:M 23 Aug 2025 01:19:05.840 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:05.84266 311:M 23 Aug 2025 01:19:05.841 # Failed to write PID file: Permission denied
+2025-08-23_01:19:05.84300                 _._                                                  
+2025-08-23_01:19:05.84334            _.-``__ ''-._                                             
+2025-08-23_01:19:05.84367       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:05.84403   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:05.84438  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:05.84471  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:05.84502  |    `-._   `._    /     _.-'    |     PID: 311
+2025-08-23_01:19:05.84532   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:05.84563  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:05.84597  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:05.84626   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:05.84655  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:05.84684  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:05.84718   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:05.84747       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:05.84774           `-._        _.-'                                           
+2025-08-23_01:19:05.84807               `-.__.-'                                               
+2025-08-23_01:19:05.84833 
+2025-08-23_01:19:05.84859 311:M 23 Aug 2025 01:19:05.841 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:06.85546 313:C 23 Aug 2025 01:19:06.855 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:06.85613 313:C 23 Aug 2025 01:19:06.855 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:06.85660 313:C 23 Aug 2025 01:19:06.855 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=313, just started
+2025-08-23_01:19:06.85705 313:C 23 Aug 2025 01:19:06.855 * Configuration loaded
+2025-08-23_01:19:06.85751 313:M 23 Aug 2025 01:19:06.855 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:06.85789 313:M 23 Aug 2025 01:19:06.856 # Failed to write PID file: Permission denied
+2025-08-23_01:19:06.85829                 _._                                                  
+2025-08-23_01:19:06.85864            _.-``__ ''-._                                             
+2025-08-23_01:19:06.85903       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:06.85939   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:06.85970  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:06.86002  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:06.86032  |    `-._   `._    /     _.-'    |     PID: 313
+2025-08-23_01:19:06.86061   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:06.86092  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:06.86124  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:06.86152   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:06.86181  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:06.86209  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:06.86236   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:06.86264       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:06.86295           `-._        _.-'                                           
+2025-08-23_01:19:06.86322               `-.__.-'                                               
+2025-08-23_01:19:06.86349 
+2025-08-23_01:19:06.86376 313:M 23 Aug 2025 01:19:06.856 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:07.87012 315:C 23 Aug 2025 01:19:07.869 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:07.87063 315:C 23 Aug 2025 01:19:07.870 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:07.87113 315:C 23 Aug 2025 01:19:07.870 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=315, just started
+2025-08-23_01:19:07.87155 315:C 23 Aug 2025 01:19:07.870 * Configuration loaded
+2025-08-23_01:19:07.87199 315:M 23 Aug 2025 01:19:07.870 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:07.87242 315:M 23 Aug 2025 01:19:07.870 # Failed to write PID file: Permission denied
+2025-08-23_01:19:07.87287                 _._                                                  
+2025-08-23_01:19:07.87329            _.-``__ ''-._                                             
+2025-08-23_01:19:07.87367       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:07.87402   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:07.87447  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:07.87509  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:07.87548  |    `-._   `._    /     _.-'    |     PID: 315
+2025-08-23_01:19:07.87587   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:07.87631  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:07.87664  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:07.87697   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:07.87730  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:07.87761  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:07.87798   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:07.87827       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:07.87855           `-._        _.-'                                           
+2025-08-23_01:19:07.87884               `-.__.-'                                               
+2025-08-23_01:19:07.87919 
+2025-08-23_01:19:07.87948 315:M 23 Aug 2025 01:19:07.871 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:08.88445 317:C 23 Aug 2025 01:19:08.884 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:08.88492 317:C 23 Aug 2025 01:19:08.884 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:08.88534 317:C 23 Aug 2025 01:19:08.884 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=317, just started
+2025-08-23_01:19:08.88574 317:C 23 Aug 2025 01:19:08.884 * Configuration loaded
+2025-08-23_01:19:08.88614 317:M 23 Aug 2025 01:19:08.884 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:08.88654 317:M 23 Aug 2025 01:19:08.885 # Failed to write PID file: Permission denied
+2025-08-23_01:19:08.88699                 _._                                                  
+2025-08-23_01:19:08.88741            _.-``__ ''-._                                             
+2025-08-23_01:19:08.88782       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:08.88817   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:08.88850  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:08.88884  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:08.88914  |    `-._   `._    /     _.-'    |     PID: 317
+2025-08-23_01:19:08.88941   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:08.88968  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:08.88998  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:08.89025   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:08.89051  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:08.89077  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:08.89109   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:08.89138       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:08.89169           `-._        _.-'                                           
+2025-08-23_01:19:08.89200               `-.__.-'                                               
+2025-08-23_01:19:08.89229 
+2025-08-23_01:19:08.89256 317:M 23 Aug 2025 01:19:08.885 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:09.89852 319:C 23 Aug 2025 01:19:09.898 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:09.89923 319:C 23 Aug 2025 01:19:09.898 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:09.89968 319:C 23 Aug 2025 01:19:09.898 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=319, just started
+2025-08-23_01:19:09.90008 319:C 23 Aug 2025 01:19:09.898 * Configuration loaded
+2025-08-23_01:19:09.90045 319:M 23 Aug 2025 01:19:09.898 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:09.90095 319:M 23 Aug 2025 01:19:09.899 # Failed to write PID file: Permission denied
+2025-08-23_01:19:09.90134                 _._                                                  
+2025-08-23_01:19:09.90174            _.-``__ ''-._                                             
+2025-08-23_01:19:09.90216       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:09.90252   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:09.90286  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:09.90318  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:09.90345  |    `-._   `._    /     _.-'    |     PID: 319
+2025-08-23_01:19:09.90372   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:09.90405  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:09.90432  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:09.90459   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:09.90492  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:09.90526  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:09.90554   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:09.90586       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:09.90614           `-._        _.-'                                           
+2025-08-23_01:19:09.90642               `-.__.-'                                               
+2025-08-23_01:19:09.90669 
+2025-08-23_01:19:09.90696 319:M 23 Aug 2025 01:19:09.899 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:10.91279 321:C 23 Aug 2025 01:19:10.912 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:10.91326 321:C 23 Aug 2025 01:19:10.912 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:10.91366 321:C 23 Aug 2025 01:19:10.912 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=321, just started
+2025-08-23_01:19:10.91408 321:C 23 Aug 2025 01:19:10.912 * Configuration loaded
+2025-08-23_01:19:10.91450 321:M 23 Aug 2025 01:19:10.913 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:10.91497 321:M 23 Aug 2025 01:19:10.913 # Failed to write PID file: Permission denied
+2025-08-23_01:19:10.91536                 _._                                                  
+2025-08-23_01:19:10.91575            _.-``__ ''-._                                             
+2025-08-23_01:19:10.91617       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:10.91657   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:10.91697  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:10.91761  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:10.91805  |    `-._   `._    /     _.-'    |     PID: 321
+2025-08-23_01:19:10.91841   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:10.91876  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:10.91917  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:10.91948   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:10.91979  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:10.92017  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:10.92054   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:10.92087       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:10.92118           `-._        _.-'                                           
+2025-08-23_01:19:10.92147               `-.__.-'                                               
+2025-08-23_01:19:10.92176 
+2025-08-23_01:19:10.92212 321:M 23 Aug 2025 01:19:10.913 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:11.92748 323:C 23 Aug 2025 01:19:11.927 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:11.92790 323:C 23 Aug 2025 01:19:11.927 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:11.92828 323:C 23 Aug 2025 01:19:11.927 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=323, just started
+2025-08-23_01:19:11.92865 323:C 23 Aug 2025 01:19:11.927 * Configuration loaded
+2025-08-23_01:19:11.92907 323:M 23 Aug 2025 01:19:11.927 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:11.92948 323:M 23 Aug 2025 01:19:11.928 # Failed to write PID file: Permission denied
+2025-08-23_01:19:11.92983                 _._                                                  
+2025-08-23_01:19:11.93016            _.-``__ ''-._                                             
+2025-08-23_01:19:11.93044       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:11.93072   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:11.93101  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:11.93129  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:11.93156  |    `-._   `._    /     _.-'    |     PID: 323
+2025-08-23_01:19:11.93185   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:11.93214  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:11.93244  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:11.93271   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:11.93306  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:11.93335  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:11.93362   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:11.93400       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:11.93430           `-._        _.-'                                           
+2025-08-23_01:19:11.93457               `-.__.-'                                               
+2025-08-23_01:19:11.93483 
+2025-08-23_01:19:11.93508 323:M 23 Aug 2025 01:19:11.928 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:12.94390 325:C 23 Aug 2025 01:19:12.943 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:12.94453 325:C 23 Aug 2025 01:19:12.943 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:12.94502 325:C 23 Aug 2025 01:19:12.943 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=325, just started
+2025-08-23_01:19:12.94543 325:C 23 Aug 2025 01:19:12.943 * Configuration loaded
+2025-08-23_01:19:12.94584 325:M 23 Aug 2025 01:19:12.944 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:12.94631 325:M 23 Aug 2025 01:19:12.944 # Failed to write PID file: Permission denied
+2025-08-23_01:19:12.94665                 _._                                                  
+2025-08-23_01:19:12.94702            _.-``__ ''-._                                             
+2025-08-23_01:19:12.94733       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:12.94768   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:12.94811  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:12.94857  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:12.94894  |    `-._   `._    /     _.-'    |     PID: 325
+2025-08-23_01:19:12.94923   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:12.94952  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:12.94983  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:12.95016   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:12.95043  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:12.95068  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:12.95092   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:12.95128       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:12.95157           `-._        _.-'                                           
+2025-08-23_01:19:12.95187               `-.__.-'                                               
+2025-08-23_01:19:12.95222 
+2025-08-23_01:19:12.95252 325:M 23 Aug 2025 01:19:12.945 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:13.95815 327:C 23 Aug 2025 01:19:13.957 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:13.95858 327:C 23 Aug 2025 01:19:13.958 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:13.95895 327:C 23 Aug 2025 01:19:13.958 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=327, just started
+2025-08-23_01:19:13.95935 327:C 23 Aug 2025 01:19:13.958 * Configuration loaded
+2025-08-23_01:19:13.95972 327:M 23 Aug 2025 01:19:13.958 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:13.96011 327:M 23 Aug 2025 01:19:13.958 # Failed to write PID file: Permission denied
+2025-08-23_01:19:13.96046                 _._                                                  
+2025-08-23_01:19:13.96084            _.-``__ ''-._                                             
+2025-08-23_01:19:13.96123       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:13.96156   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:13.96182  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:13.96228  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:13.96255  |    `-._   `._    /     _.-'    |     PID: 327
+2025-08-23_01:19:13.96284   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:13.96311  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:13.96341  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:13.96365   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:13.96390  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:13.96414  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:13.96441   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:13.96467       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:13.96493           `-._        _.-'                                           
+2025-08-23_01:19:13.96521               `-.__.-'                                               
+2025-08-23_01:19:13.96548 
+2025-08-23_01:19:13.96573 327:M 23 Aug 2025 01:19:13.959 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:14.97303 329:C 23 Aug 2025 01:19:14.972 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:14.97348 329:C 23 Aug 2025 01:19:14.972 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:14.97394 329:C 23 Aug 2025 01:19:14.972 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=329, just started
+2025-08-23_01:19:14.97441 329:C 23 Aug 2025 01:19:14.972 * Configuration loaded
+2025-08-23_01:19:14.97483 329:M 23 Aug 2025 01:19:14.973 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:14.97522 329:M 23 Aug 2025 01:19:14.973 # Failed to write PID file: Permission denied
+2025-08-23_01:19:14.97560                 _._                                                  
+2025-08-23_01:19:14.97603            _.-``__ ''-._                                             
+2025-08-23_01:19:14.97636       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:14.97673   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:14.97708  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:14.97742  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:14.97771  |    `-._   `._    /     _.-'    |     PID: 329
+2025-08-23_01:19:14.97801   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:14.97833  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:14.97862  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:14.97888   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:14.97916  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:14.97947  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:14.97975   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:14.98006       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:14.98037           `-._        _.-'                                           
+2025-08-23_01:19:14.98065               `-.__.-'                                               
+2025-08-23_01:19:14.98091 
+2025-08-23_01:19:14.98122 329:M 23 Aug 2025 01:19:14.974 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:15.98878 331:C 23 Aug 2025 01:19:15.988 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:15.98945 331:C 23 Aug 2025 01:19:15.988 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:15.98983 331:C 23 Aug 2025 01:19:15.988 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=331, just started
+2025-08-23_01:19:15.99023 331:C 23 Aug 2025 01:19:15.988 * Configuration loaded
+2025-08-23_01:19:15.99062 331:M 23 Aug 2025 01:19:15.989 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:15.99100 331:M 23 Aug 2025 01:19:15.989 # Failed to write PID file: Permission denied
+2025-08-23_01:19:15.99137                 _._                                                  
+2025-08-23_01:19:15.99173            _.-``__ ''-._                                             
+2025-08-23_01:19:15.99208       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:15.99255   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:15.99283  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:15.99316  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:15.99344  |    `-._   `._    /     _.-'    |     PID: 331
+2025-08-23_01:19:15.99371   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:15.99397  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:15.99427  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:15.99455   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:15.99482  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:15.99507  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:15.99534   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:15.99562       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:15.99593           `-._        _.-'                                           
+2025-08-23_01:19:15.99626               `-.__.-'                                               
+2025-08-23_01:19:15.99650 
+2025-08-23_01:19:15.99678 331:M 23 Aug 2025 01:19:15.989 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:17.00372 333:C 23 Aug 2025 01:19:17.003 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:17.00413 333:C 23 Aug 2025 01:19:17.003 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:17.00452 333:C 23 Aug 2025 01:19:17.003 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=333, just started
+2025-08-23_01:19:17.00496 333:C 23 Aug 2025 01:19:17.003 * Configuration loaded
+2025-08-23_01:19:17.00539 333:M 23 Aug 2025 01:19:17.003 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:17.00594 333:M 23 Aug 2025 01:19:17.004 # Failed to write PID file: Permission denied
+2025-08-23_01:19:17.00635                 _._                                                  
+2025-08-23_01:19:17.00678            _.-``__ ''-._                                             
+2025-08-23_01:19:17.00720       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:17.00758   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:17.00796  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:17.00854  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:17.00893  |    `-._   `._    /     _.-'    |     PID: 333
+2025-08-23_01:19:17.00929   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:17.00962  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:17.00989  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:17.01023   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:17.01053  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:17.01080  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:17.01108   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:17.01139       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:17.01172           `-._        _.-'                                           
+2025-08-23_01:19:17.01198               `-.__.-'                                               
+2025-08-23_01:19:17.01232 
+2025-08-23_01:19:17.01260 333:M 23 Aug 2025 01:19:17.004 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:18.01486 335:C 23 Aug 2025 01:19:18.014 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:18.01526 335:C 23 Aug 2025 01:19:18.014 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:18.01564 335:C 23 Aug 2025 01:19:18.014 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=335, just started
+2025-08-23_01:19:18.01601 335:C 23 Aug 2025 01:19:18.014 * Configuration loaded
+2025-08-23_01:19:18.01634 335:M 23 Aug 2025 01:19:18.015 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:18.01676 335:M 23 Aug 2025 01:19:18.015 # Failed to write PID file: Permission denied
+2025-08-23_01:19:18.01713                 _._                                                  
+2025-08-23_01:19:18.01760            _.-``__ ''-._                                             
+2025-08-23_01:19:18.01793       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:18.01824   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:18.01850  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:18.01880  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:18.01914  |    `-._   `._    /     _.-'    |     PID: 335
+2025-08-23_01:19:18.01942   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:18.01965  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:18.01991  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:18.02031   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:18.02061  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:18.02096  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:18.02126   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:18.02156       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:18.02182           `-._        _.-'                                           
+2025-08-23_01:19:18.02206               `-.__.-'                                               
+2025-08-23_01:19:18.02232 
+2025-08-23_01:19:18.02257 335:M 23 Aug 2025 01:19:18.015 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:19.02972 337:C 23 Aug 2025 01:19:19.029 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:19.03040 337:C 23 Aug 2025 01:19:19.029 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:19.03086 337:C 23 Aug 2025 01:19:19.029 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=337, just started
+2025-08-23_01:19:19.03129 337:C 23 Aug 2025 01:19:19.029 * Configuration loaded
+2025-08-23_01:19:19.03172 337:M 23 Aug 2025 01:19:19.029 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:19.03217 337:M 23 Aug 2025 01:19:19.030 # Failed to write PID file: Permission denied
+2025-08-23_01:19:19.03253                 _._                                                  
+2025-08-23_01:19:19.03288            _.-``__ ''-._                                             
+2025-08-23_01:19:19.03332       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:19.03366   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:19.03399  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:19.03436  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:19.03465  |    `-._   `._    /     _.-'    |     PID: 337
+2025-08-23_01:19:19.03497   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:19.03527  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:19.03556  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:19.03587   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:19.03616  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:19.03647  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:19.03680   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:19.03720       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:19.03751           `-._        _.-'                                           
+2025-08-23_01:19:19.03780               `-.__.-'                                               
+2025-08-23_01:19:19.03809 
+2025-08-23_01:19:19.03839 337:M 23 Aug 2025 01:19:19.030 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:20.04587 339:C 23 Aug 2025 01:19:20.045 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:20.04637 339:C 23 Aug 2025 01:19:20.045 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:20.04683 339:C 23 Aug 2025 01:19:20.045 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=339, just started
+2025-08-23_01:19:20.04723 339:C 23 Aug 2025 01:19:20.045 * Configuration loaded
+2025-08-23_01:19:20.04766 339:M 23 Aug 2025 01:19:20.046 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:20.04809 339:M 23 Aug 2025 01:19:20.046 # Failed to write PID file: Permission denied
+2025-08-23_01:19:20.04849                 _._                                                  
+2025-08-23_01:19:20.04885            _.-``__ ''-._                                             
+2025-08-23_01:19:20.04924       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:20.04955   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:20.04985  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:20.05034  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:20.05065  |    `-._   `._    /     _.-'    |     PID: 339
+2025-08-23_01:19:20.05095   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:20.05124  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:20.05153  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:20.05180   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:20.05207  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:20.05235  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:20.05260   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:20.05289       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:20.05324           `-._        _.-'                                           
+2025-08-23_01:19:20.05352               `-.__.-'                                               
+2025-08-23_01:19:20.05383 
+2025-08-23_01:19:20.05418 339:M 23 Aug 2025 01:19:20.046 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:21.06014 341:C 23 Aug 2025 01:19:21.060 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:21.06055 341:C 23 Aug 2025 01:19:21.060 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:21.06091 341:C 23 Aug 2025 01:19:21.060 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=341, just started
+2025-08-23_01:19:21.06146 341:C 23 Aug 2025 01:19:21.060 * Configuration loaded
+2025-08-23_01:19:21.06189 341:M 23 Aug 2025 01:19:21.060 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:21.06227 341:M 23 Aug 2025 01:19:21.060 # Failed to write PID file: Permission denied
+2025-08-23_01:19:21.06266                 _._                                                  
+2025-08-23_01:19:21.06302            _.-``__ ''-._                                             
+2025-08-23_01:19:21.06339       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:21.06376   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:21.06413  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:21.06450  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:21.06478  |    `-._   `._    /     _.-'    |     PID: 341
+2025-08-23_01:19:21.06511   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:21.06538  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:21.06563  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:21.06592   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:21.06622  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:21.06649  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:21.06680   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:21.06711       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:21.06739           `-._        _.-'                                           
+2025-08-23_01:19:21.06780               `-.__.-'                                               
+2025-08-23_01:19:21.06820 
+2025-08-23_01:19:21.06852 341:M 23 Aug 2025 01:19:21.061 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:22.07566 343:C 23 Aug 2025 01:19:22.075 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:22.07631 343:C 23 Aug 2025 01:19:22.075 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:22.07673 343:C 23 Aug 2025 01:19:22.075 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=343, just started
+2025-08-23_01:19:22.07708 343:C 23 Aug 2025 01:19:22.075 * Configuration loaded
+2025-08-23_01:19:22.07746 343:M 23 Aug 2025 01:19:22.075 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:22.07786 343:M 23 Aug 2025 01:19:22.076 # Failed to write PID file: Permission denied
+2025-08-23_01:19:22.07830                 _._                                                  
+2025-08-23_01:19:22.07867            _.-``__ ''-._                                             
+2025-08-23_01:19:22.07909       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:22.07947   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:22.07980  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:22.08014  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:22.08047  |    `-._   `._    /     _.-'    |     PID: 343
+2025-08-23_01:19:22.08081   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:22.08125  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:22.08152  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:22.08179   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:22.08210  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:22.08237  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:22.08262   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:22.08289       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:22.08324           `-._        _.-'                                           
+2025-08-23_01:19:22.08349               `-.__.-'                                               
+2025-08-23_01:19:22.08375 
+2025-08-23_01:19:22.08410 343:M 23 Aug 2025 01:19:22.076 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:23.09127 351:C 23 Aug 2025 01:19:23.091 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:23.09170 351:C 23 Aug 2025 01:19:23.091 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:23.09215 351:C 23 Aug 2025 01:19:23.091 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=351, just started
+2025-08-23_01:19:23.09251 351:C 23 Aug 2025 01:19:23.091 * Configuration loaded
+2025-08-23_01:19:23.09288 351:M 23 Aug 2025 01:19:23.091 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:23.09329 351:M 23 Aug 2025 01:19:23.092 # Failed to write PID file: Permission denied
+2025-08-23_01:19:23.09366                 _._                                                  
+2025-08-23_01:19:23.09400            _.-``__ ''-._                                             
+2025-08-23_01:19:23.09438       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:23.09473   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:23.09512  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:23.09565  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:23.09601  |    `-._   `._    /     _.-'    |     PID: 351
+2025-08-23_01:19:23.09636   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:23.09669  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:23.09700  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:23.09728   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:23.09751  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:23.09776  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:23.09803   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:23.09835       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:23.09860           `-._        _.-'                                           
+2025-08-23_01:19:23.09884               `-.__.-'                                               
+2025-08-23_01:19:23.09914 
+2025-08-23_01:19:23.09938 351:M 23 Aug 2025 01:19:23.092 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:24.10687 380:C 23 Aug 2025 01:19:24.106 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:24.10762 380:C 23 Aug 2025 01:19:24.106 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:24.10827 380:C 23 Aug 2025 01:19:24.106 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=380, just started
+2025-08-23_01:19:24.10899 380:C 23 Aug 2025 01:19:24.106 * Configuration loaded
+2025-08-23_01:19:24.10992 380:M 23 Aug 2025 01:19:24.107 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:24.11075 380:M 23 Aug 2025 01:19:24.107 # Failed to write PID file: Permission denied
+2025-08-23_01:19:24.11139                 _._                                                  
+2025-08-23_01:19:24.11225            _.-``__ ''-._                                             
+2025-08-23_01:19:24.11298       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:24.11363   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:24.11417  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:24.11460  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:24.11516  |    `-._   `._    /     _.-'    |     PID: 380
+2025-08-23_01:19:24.11552   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:24.11588  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:24.11637  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:24.11679   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:24.11738  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:24.11790  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:24.11847   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:24.11907       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:24.11953           `-._        _.-'                                           
+2025-08-23_01:19:24.11991               `-.__.-'                                               
+2025-08-23_01:19:24.12044 
+2025-08-23_01:19:24.12092 380:M 23 Aug 2025 01:19:24.108 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:25.12084 417:C 23 Aug 2025 01:19:25.120 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:25.12180 417:C 23 Aug 2025 01:19:25.120 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:25.12247 417:C 23 Aug 2025 01:19:25.120 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=417, just started
+2025-08-23_01:19:25.12293 417:C 23 Aug 2025 01:19:25.120 * Configuration loaded
+2025-08-23_01:19:25.12355 417:M 23 Aug 2025 01:19:25.121 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:25.12423 417:M 23 Aug 2025 01:19:25.121 # Failed to write PID file: Permission denied
+2025-08-23_01:19:25.12492                 _._                                                  
+2025-08-23_01:19:25.12543            _.-``__ ''-._                                             
+2025-08-23_01:19:25.12598       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:25.12673   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:25.12731  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:25.12783  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:25.12833  |    `-._   `._    /     _.-'    |     PID: 417
+2025-08-23_01:19:25.12881   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:25.12927  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:25.12988  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:25.13053   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:25.13092  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:25.13140  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:25.13189   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:25.13242       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:25.13294           `-._        _.-'                                           
+2025-08-23_01:19:25.13353               `-.__.-'                                               
+2025-08-23_01:19:25.13398 
+2025-08-23_01:19:25.13445 417:M 23 Aug 2025 01:19:25.122 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:26.13380 453:C 23 Aug 2025 01:19:26.133 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:26.13443 453:C 23 Aug 2025 01:19:26.133 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:26.13502 453:C 23 Aug 2025 01:19:26.133 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=453, just started
+2025-08-23_01:19:26.13558 453:C 23 Aug 2025 01:19:26.133 * Configuration loaded
+2025-08-23_01:19:26.13617 453:M 23 Aug 2025 01:19:26.134 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:26.13667 453:M 23 Aug 2025 01:19:26.134 # Failed to write PID file: Permission denied
+2025-08-23_01:19:26.13717                 _._                                                  
+2025-08-23_01:19:26.13767            _.-``__ ''-._                                             
+2025-08-23_01:19:26.13820       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:26.13867   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:26.13917  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:26.13999  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:26.14064  |    `-._   `._    /     _.-'    |     PID: 453
+2025-08-23_01:19:26.14110   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:26.14151  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:26.14212  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:26.14266   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:26.14338  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:26.14409  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:26.14466   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:26.14535       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:26.14605           `-._        _.-'                                           
+2025-08-23_01:19:26.14677               `-.__.-'                                               
+2025-08-23_01:19:26.14732 
+2025-08-23_01:19:26.14775 453:M 23 Aug 2025 01:19:26.135 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:27.14786 483:C 23 Aug 2025 01:19:27.147 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:27.14849 483:C 23 Aug 2025 01:19:27.147 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:27.14911 483:C 23 Aug 2025 01:19:27.147 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=483, just started
+2025-08-23_01:19:27.14963 483:C 23 Aug 2025 01:19:27.147 * Configuration loaded
+2025-08-23_01:19:27.15029 483:M 23 Aug 2025 01:19:27.148 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:27.15079 483:M 23 Aug 2025 01:19:27.148 # Failed to write PID file: Permission denied
+2025-08-23_01:19:27.15134                 _._                                                  
+2025-08-23_01:19:27.15193            _.-``__ ''-._                                             
+2025-08-23_01:19:27.15252       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:27.15298   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:27.15360  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:27.15409  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:27.15473  |    `-._   `._    /     _.-'    |     PID: 483
+2025-08-23_01:19:27.15554   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:27.15623  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:27.15699  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:27.15771   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:27.15865  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:27.15915  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:27.15988   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:27.16086       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:27.16174           `-._        _.-'                                           
+2025-08-23_01:19:27.16278               `-.__.-'                                               
+2025-08-23_01:19:27.16372 
+2025-08-23_01:19:27.16430 483:M 23 Aug 2025 01:19:27.149 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:28.16188 518:C 23 Aug 2025 01:19:28.161 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:28.16313 518:C 23 Aug 2025 01:19:28.161 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:28.16365 518:C 23 Aug 2025 01:19:28.161 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=518, just started
+2025-08-23_01:19:28.16425 518:C 23 Aug 2025 01:19:28.161 * Configuration loaded
+2025-08-23_01:19:28.16481 518:M 23 Aug 2025 01:19:28.162 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:28.16537 518:M 23 Aug 2025 01:19:28.162 # Failed to write PID file: Permission denied
+2025-08-23_01:19:28.16583                 _._                                                  
+2025-08-23_01:19:28.16632            _.-``__ ''-._                                             
+2025-08-23_01:19:28.16685       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:28.16748   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:28.16799  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:28.16861  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:28.16907  |    `-._   `._    /     _.-'    |     PID: 518
+2025-08-23_01:19:28.16956   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:28.16996  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:28.17066  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:28.17114   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:28.17156  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:28.17195  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:28.17249   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:28.17295       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:28.17347           `-._        _.-'                                           
+2025-08-23_01:19:28.17399               `-.__.-'                                               
+2025-08-23_01:19:28.17450 
+2025-08-23_01:19:28.17491 518:M 23 Aug 2025 01:19:28.163 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:29.17563 527:C 23 Aug 2025 01:19:29.175 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:29.17624 527:C 23 Aug 2025 01:19:29.175 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:29.17670 527:C 23 Aug 2025 01:19:29.175 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=527, just started
+2025-08-23_01:19:29.17707 527:C 23 Aug 2025 01:19:29.175 * Configuration loaded
+2025-08-23_01:19:29.17748 527:M 23 Aug 2025 01:19:29.175 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:29.17790 527:M 23 Aug 2025 01:19:29.176 # Failed to write PID file: Permission denied
+2025-08-23_01:19:29.17832                 _._                                                  
+2025-08-23_01:19:29.17871            _.-``__ ''-._                                             
+2025-08-23_01:19:29.17909       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:29.17955   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:29.17990  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:29.18048  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:29.18078  |    `-._   `._    /     _.-'    |     PID: 527
+2025-08-23_01:19:29.18114   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:29.18141  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:29.18167  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:29.18192   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:29.18222  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:29.18246  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:29.18270   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:29.18296       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:29.18335           `-._        _.-'                                           
+2025-08-23_01:19:29.18368               `-.__.-'                                               
+2025-08-23_01:19:29.18397 
+2025-08-23_01:19:29.18440 527:M 23 Aug 2025 01:19:29.177 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:30.18779 558:C 23 Aug 2025 01:19:30.187 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:30.18853 558:C 23 Aug 2025 01:19:30.187 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:30.18956 558:C 23 Aug 2025 01:19:30.187 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=558, just started
+2025-08-23_01:19:30.19026 558:C 23 Aug 2025 01:19:30.187 * Configuration loaded
+2025-08-23_01:19:30.19075 558:M 23 Aug 2025 01:19:30.188 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:30.19141 558:M 23 Aug 2025 01:19:30.188 # Failed to write PID file: Permission denied
+2025-08-23_01:19:30.19185                 _._                                                  
+2025-08-23_01:19:30.19243            _.-``__ ''-._                                             
+2025-08-23_01:19:30.19285       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:30.19333   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:30.19379  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:30.19429  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:30.19471  |    `-._   `._    /     _.-'    |     PID: 558
+2025-08-23_01:19:30.19526   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:30.19570  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:30.19630  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:30.19676   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:30.19728  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:30.19767  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:30.19822   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:30.19865       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:30.19902           `-._        _.-'                                           
+2025-08-23_01:19:30.19950               `-.__.-'                                               
+2025-08-23_01:19:30.19987 
+2025-08-23_01:19:30.20032 558:M 23 Aug 2025 01:19:30.189 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:31.20126 573:C 23 Aug 2025 01:19:31.201 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:31.20194 573:C 23 Aug 2025 01:19:31.201 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:31.20235 573:C 23 Aug 2025 01:19:31.201 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=573, just started
+2025-08-23_01:19:31.20275 573:C 23 Aug 2025 01:19:31.201 * Configuration loaded
+2025-08-23_01:19:31.20318 573:M 23 Aug 2025 01:19:31.201 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:31.20356 573:M 23 Aug 2025 01:19:31.201 # Failed to write PID file: Permission denied
+2025-08-23_01:19:31.20389                 _._                                                  
+2025-08-23_01:19:31.20422            _.-``__ ''-._                                             
+2025-08-23_01:19:31.20449       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:31.20476   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:31.20506  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:31.20539  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:31.20575  |    `-._   `._    /     _.-'    |     PID: 573
+2025-08-23_01:19:31.20608   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:31.20646  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:31.20683  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:31.20717   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:31.20755  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:31.20786  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:31.20815   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:31.20848       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:31.20877           `-._        _.-'                                           
+2025-08-23_01:19:31.20910               `-.__.-'                                               
+2025-08-23_01:19:31.20940 
+2025-08-23_01:19:31.20968 573:M 23 Aug 2025 01:19:31.202 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:32.22039 604:C 23 Aug 2025 01:19:32.220 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:32.22148 604:C 23 Aug 2025 01:19:32.220 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:32.22229 604:C 23 Aug 2025 01:19:32.220 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=604, just started
+2025-08-23_01:19:32.22373 604:C 23 Aug 2025 01:19:32.220 * Configuration loaded
+2025-08-23_01:19:32.22518 604:M 23 Aug 2025 01:19:32.220 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:32.22613 604:M 23 Aug 2025 01:19:32.221 # Failed to write PID file: Permission denied
+2025-08-23_01:19:32.22719                 _._                                                  
+2025-08-23_01:19:32.22770            _.-``__ ''-._                                             
+2025-08-23_01:19:32.22846       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:32.22912   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:32.22988  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:32.23096  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:32.23167  |    `-._   `._    /     _.-'    |     PID: 604
+2025-08-23_01:19:32.23233   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:32.23297  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:32.23384  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:32.23453   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:32.23534  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:32.23593  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:32.23665   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:32.23736       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:32.23794           `-._        _.-'                                           
+2025-08-23_01:19:32.23850               `-.__.-'                                               
+2025-08-23_01:19:32.23931 
+2025-08-23_01:19:32.24000 604:M 23 Aug 2025 01:19:32.222 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:33.23665 617:C 23 Aug 2025 01:19:33.236 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:33.23709 617:C 23 Aug 2025 01:19:33.236 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:33.23757 617:C 23 Aug 2025 01:19:33.236 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=617, just started
+2025-08-23_01:19:33.23809 617:C 23 Aug 2025 01:19:33.236 * Configuration loaded
+2025-08-23_01:19:33.23846 617:M 23 Aug 2025 01:19:33.236 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:33.23886 617:M 23 Aug 2025 01:19:33.237 # Failed to write PID file: Permission denied
+2025-08-23_01:19:33.23928                 _._                                                  
+2025-08-23_01:19:33.23969            _.-``__ ''-._                                             
+2025-08-23_01:19:33.24011       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:33.24057   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:33.24099  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:33.24132  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:33.24164  |    `-._   `._    /     _.-'    |     PID: 617
+2025-08-23_01:19:33.24203   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:33.24240  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:33.24269  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:33.24299   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:33.24332  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:33.24362  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:33.24391   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:33.24422       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:33.24452           `-._        _.-'                                           
+2025-08-23_01:19:33.24481               `-.__.-'                                               
+2025-08-23_01:19:33.24525 
+2025-08-23_01:19:33.24561 617:M 23 Aug 2025 01:19:33.237 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:34.25338 647:C 23 Aug 2025 01:19:34.253 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:34.25456 647:C 23 Aug 2025 01:19:34.253 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:34.25520 647:C 23 Aug 2025 01:19:34.253 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=647, just started
+2025-08-23_01:19:34.25598 647:C 23 Aug 2025 01:19:34.253 * Configuration loaded
+2025-08-23_01:19:34.25686 647:M 23 Aug 2025 01:19:34.253 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:34.25771 647:M 23 Aug 2025 01:19:34.254 # Failed to write PID file: Permission denied
+2025-08-23_01:19:34.25847                 _._                                                  
+2025-08-23_01:19:34.25914            _.-``__ ''-._                                             
+2025-08-23_01:19:34.25969       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:34.26033   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:34.26089  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:34.26152  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:34.26218  |    `-._   `._    /     _.-'    |     PID: 647
+2025-08-23_01:19:34.26266   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:34.26321  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:34.26364  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:34.26424   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:34.26470  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:34.26528  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:34.26581   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:34.26640       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:34.26692           `-._        _.-'                                           
+2025-08-23_01:19:34.26773               `-.__.-'                                               
+2025-08-23_01:19:34.26866 
+2025-08-23_01:19:34.26928 647:M 23 Aug 2025 01:19:34.254 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:35.26671 686:C 23 Aug 2025 01:19:35.266 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:35.26731 686:C 23 Aug 2025 01:19:35.266 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:35.26786 686:C 23 Aug 2025 01:19:35.266 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=686, just started
+2025-08-23_01:19:35.26853 686:C 23 Aug 2025 01:19:35.266 * Configuration loaded
+2025-08-23_01:19:35.26927 686:M 23 Aug 2025 01:19:35.266 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:35.26977 686:M 23 Aug 2025 01:19:35.267 # Failed to write PID file: Permission denied
+2025-08-23_01:19:35.27051                 _._                                                  
+2025-08-23_01:19:35.27138            _.-``__ ''-._                                             
+2025-08-23_01:19:35.27192       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:35.27269   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:35.27326  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:35.27387  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:35.27439  |    `-._   `._    /     _.-'    |     PID: 686
+2025-08-23_01:19:35.27478   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:35.27527  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:35.27565  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:35.27631   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:35.27681  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:35.27734  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:35.27770   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:35.27818       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:35.27870           `-._        _.-'                                           
+2025-08-23_01:19:35.27914               `-.__.-'                                               
+2025-08-23_01:19:35.27989 
+2025-08-23_01:19:35.28055 686:M 23 Aug 2025 01:19:35.267 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:36.28223 716:C 23 Aug 2025 01:19:36.282 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:36.28282 716:C 23 Aug 2025 01:19:36.282 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:36.28393 716:C 23 Aug 2025 01:19:36.282 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=716, just started
+2025-08-23_01:19:36.28493 716:C 23 Aug 2025 01:19:36.282 * Configuration loaded
+2025-08-23_01:19:36.28585 716:M 23 Aug 2025 01:19:36.282 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:36.28684 716:M 23 Aug 2025 01:19:36.282 # Failed to write PID file: Permission denied
+2025-08-23_01:19:36.28787                 _._                                                  
+2025-08-23_01:19:36.28872            _.-``__ ''-._                                             
+2025-08-23_01:19:36.28944       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:36.29020   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:36.29092  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:36.29198  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:36.29274  |    `-._   `._    /     _.-'    |     PID: 716
+2025-08-23_01:19:36.29361   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:36.29467  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:36.29600  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:36.29701   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:36.29833  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:36.29919  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:36.30001   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:36.30075       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:36.30131           `-._        _.-'                                           
+2025-08-23_01:19:36.30215               `-.__.-'                                               
+2025-08-23_01:19:36.30319 
+2025-08-23_01:19:36.30385 716:M 23 Aug 2025 01:19:36.284 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:37.29599 750:C 23 Aug 2025 01:19:37.295 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:37.29714 750:C 23 Aug 2025 01:19:37.295 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:37.29773 750:C 23 Aug 2025 01:19:37.295 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=750, just started
+2025-08-23_01:19:37.29837 750:C 23 Aug 2025 01:19:37.295 * Configuration loaded
+2025-08-23_01:19:37.29887 750:M 23 Aug 2025 01:19:37.296 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:37.29941 750:M 23 Aug 2025 01:19:37.296 # Failed to write PID file: Permission denied
+2025-08-23_01:19:37.29982                 _._                                                  
+2025-08-23_01:19:37.30042            _.-``__ ''-._                                             
+2025-08-23_01:19:37.30095       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:37.30160   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:37.30229  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:37.30275  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:37.30347  |    `-._   `._    /     _.-'    |     PID: 750
+2025-08-23_01:19:37.30410   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:37.30454  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:37.30494  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:37.30546   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:37.30601  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:37.30668  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:37.30718   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:37.30790       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:37.30846           `-._        _.-'                                           
+2025-08-23_01:19:37.30895               `-.__.-'                                               
+2025-08-23_01:19:37.30941 
+2025-08-23_01:19:37.31010 750:M 23 Aug 2025 01:19:37.297 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:38.31201 783:C 23 Aug 2025 01:19:38.311 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:38.31264 783:C 23 Aug 2025 01:19:38.312 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:38.31313 783:C 23 Aug 2025 01:19:38.312 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=783, just started
+2025-08-23_01:19:38.31380 783:C 23 Aug 2025 01:19:38.312 * Configuration loaded
+2025-08-23_01:19:38.31477 783:M 23 Aug 2025 01:19:38.312 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:38.31581 783:M 23 Aug 2025 01:19:38.312 # Failed to write PID file: Permission denied
+2025-08-23_01:19:38.31677                 _._                                                  
+2025-08-23_01:19:38.31895            _.-``__ ''-._                                             
+2025-08-23_01:19:38.31982       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:38.32057   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:38.32178  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:38.32268  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:38.32321  |    `-._   `._    /     _.-'    |     PID: 783
+2025-08-23_01:19:38.32365   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:38.32420  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:38.32462  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:38.32519   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:38.32566  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:38.32658  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:38.32718   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:38.32773       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:38.32824           `-._        _.-'                                           
+2025-08-23_01:19:38.32867               `-.__.-'                                               
+2025-08-23_01:19:38.32924 
+2025-08-23_01:19:38.33023 783:M 23 Aug 2025 01:19:38.313 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:39.32872 794:C 23 Aug 2025 01:19:39.328 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:39.32959 794:C 23 Aug 2025 01:19:39.328 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:39.33021 794:C 23 Aug 2025 01:19:39.328 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=794, just started
+2025-08-23_01:19:39.33072 794:C 23 Aug 2025 01:19:39.328 * Configuration loaded
+2025-08-23_01:19:39.33143 794:M 23 Aug 2025 01:19:39.329 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:39.33248 794:M 23 Aug 2025 01:19:39.329 # Failed to write PID file: Permission denied
+2025-08-23_01:19:39.33330                 _._                                                  
+2025-08-23_01:19:39.33395            _.-``__ ''-._                                             
+2025-08-23_01:19:39.33458       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:39.33528   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:39.33585  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:39.33648  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:39.33698  |    `-._   `._    /     _.-'    |     PID: 794
+2025-08-23_01:19:39.33782   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:39.33836  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:39.33902  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:39.33947   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:39.34009  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:39.34061  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:39.34116   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:39.34164       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:39.34226           `-._        _.-'                                           
+2025-08-23_01:19:39.34254               `-.__.-'                                               
+2025-08-23_01:19:39.34287 
+2025-08-23_01:19:39.34329 794:M 23 Aug 2025 01:19:39.330 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:40.34430 822:C 23 Aug 2025 01:19:40.344 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:40.34799 822:C 23 Aug 2025 01:19:40.344 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:40.34878 822:C 23 Aug 2025 01:19:40.344 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=822, just started
+2025-08-23_01:19:40.34937 822:C 23 Aug 2025 01:19:40.344 * Configuration loaded
+2025-08-23_01:19:40.35007 822:M 23 Aug 2025 01:19:40.344 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:40.35102 822:M 23 Aug 2025 01:19:40.345 # Failed to write PID file: Permission denied
+2025-08-23_01:19:40.35203                 _._                                                  
+2025-08-23_01:19:40.35288            _.-``__ ''-._                                             
+2025-08-23_01:19:40.35360       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:40.35468   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:40.35551  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:40.35626  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:40.35690  |    `-._   `._    /     _.-'    |     PID: 822
+2025-08-23_01:19:40.35746   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:40.35815  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:40.35876  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:40.35933   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:40.35982  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:40.36046  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:40.36114   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:40.36167       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:40.36215           `-._        _.-'                                           
+2025-08-23_01:19:40.36271               `-.__.-'                                               
+2025-08-23_01:19:40.36325 
+2025-08-23_01:19:40.36369 822:M 23 Aug 2025 01:19:40.347 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:41.36039 860:C 23 Aug 2025 01:19:41.360 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:41.36104 860:C 23 Aug 2025 01:19:41.360 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:41.36178 860:C 23 Aug 2025 01:19:41.360 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=860, just started
+2025-08-23_01:19:41.36239 860:C 23 Aug 2025 01:19:41.360 * Configuration loaded
+2025-08-23_01:19:41.36313 860:M 23 Aug 2025 01:19:41.360 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:41.36381 860:M 23 Aug 2025 01:19:41.360 # Failed to write PID file: Permission denied
+2025-08-23_01:19:41.36439                 _._                                                  
+2025-08-23_01:19:41.36495            _.-``__ ''-._                                             
+2025-08-23_01:19:41.36575       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:41.36632   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:41.36686  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:41.36773  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:41.36826  |    `-._   `._    /     _.-'    |     PID: 860
+2025-08-23_01:19:41.36888   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:41.36942  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:41.36990  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:41.37048   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:41.37104  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:41.37153  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:41.37208   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:41.37254       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:41.37346           `-._        _.-'                                           
+2025-08-23_01:19:41.37426               `-.__.-'                                               
+2025-08-23_01:19:41.37493 
+2025-08-23_01:19:41.37551 860:M 23 Aug 2025 01:19:41.361 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:42.38138 897:C 23 Aug 2025 01:19:42.381 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:42.38228 897:C 23 Aug 2025 01:19:42.381 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:42.38329 897:C 23 Aug 2025 01:19:42.381 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=897, just started
+2025-08-23_01:19:42.38478 897:C 23 Aug 2025 01:19:42.381 * Configuration loaded
+2025-08-23_01:19:42.38597 897:M 23 Aug 2025 01:19:42.381 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:42.38664 897:M 23 Aug 2025 01:19:42.382 # Failed to write PID file: Permission denied
+2025-08-23_01:19:42.38740                 _._                                                  
+2025-08-23_01:19:42.38828            _.-``__ ''-._                                             
+2025-08-23_01:19:42.38907       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:42.38984   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:42.39079  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:42.39134  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:42.39202  |    `-._   `._    /     _.-'    |     PID: 897
+2025-08-23_01:19:42.39282   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:42.39336  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:42.39408  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:42.39466   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:42.39517  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:42.39578  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:42.39637   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:42.39705       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:42.39769           `-._        _.-'                                           
+2025-08-23_01:19:42.39823               `-.__.-'                                               
+2025-08-23_01:19:42.39898 
+2025-08-23_01:19:42.39963 897:M 23 Aug 2025 01:19:42.384 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:43.39693 934:C 23 Aug 2025 01:19:43.396 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:43.39756 934:C 23 Aug 2025 01:19:43.396 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:43.39798 934:C 23 Aug 2025 01:19:43.396 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=934, just started
+2025-08-23_01:19:43.39839 934:C 23 Aug 2025 01:19:43.396 * Configuration loaded
+2025-08-23_01:19:43.39889 934:M 23 Aug 2025 01:19:43.397 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:43.39942 934:M 23 Aug 2025 01:19:43.397 # Failed to write PID file: Permission denied
+2025-08-23_01:19:43.39987                 _._                                                  
+2025-08-23_01:19:43.40036            _.-``__ ''-._                                             
+2025-08-23_01:19:43.40077       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:43.40113   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:43.40153  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:43.40205  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:43.40246  |    `-._   `._    /     _.-'    |     PID: 934
+2025-08-23_01:19:43.40292   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:43.40336  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:43.40380  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:43.40432   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:43.40483  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:43.40537  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:43.40594   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:43.40664       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:43.40777           `-._        _.-'                                           
+2025-08-23_01:19:43.40920               `-.__.-'                                               
+2025-08-23_01:19:43.41003 
+2025-08-23_01:19:43.41130 934:M 23 Aug 2025 01:19:43.398 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:44.41152 943:C 23 Aug 2025 01:19:44.411 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:44.41195 943:C 23 Aug 2025 01:19:44.411 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:44.41238 943:C 23 Aug 2025 01:19:44.411 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=943, just started
+2025-08-23_01:19:44.41277 943:C 23 Aug 2025 01:19:44.411 * Configuration loaded
+2025-08-23_01:19:44.41318 943:M 23 Aug 2025 01:19:44.411 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:44.41359 943:M 23 Aug 2025 01:19:44.412 # Failed to write PID file: Permission denied
+2025-08-23_01:19:44.41399                 _._                                                  
+2025-08-23_01:19:44.41438            _.-``__ ''-._                                             
+2025-08-23_01:19:44.41476       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:44.41514   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:44.41557  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:44.41610  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:44.41647  |    `-._   `._    /     _.-'    |     PID: 943
+2025-08-23_01:19:44.41687   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:44.41729  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:44.41769  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:44.41815   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:44.41846  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:44.41874  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:44.41902   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:44.41930       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:44.41962           `-._        _.-'                                           
+2025-08-23_01:19:44.41993               `-.__.-'                                               
+2025-08-23_01:19:44.42021 
+2025-08-23_01:19:44.42047 943:M 23 Aug 2025 01:19:44.412 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:45.48546 971:C 23 Aug 2025 01:19:45.485 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:45.48801 971:C 23 Aug 2025 01:19:45.485 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:45.48933 971:C 23 Aug 2025 01:19:45.485 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=971, just started
+2025-08-23_01:19:45.49054 971:C 23 Aug 2025 01:19:45.485 * Configuration loaded
+2025-08-23_01:19:45.49149 971:M 23 Aug 2025 01:19:45.486 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:45.50555 971:M 23 Aug 2025 01:19:45.486 # Failed to write PID file: Permission denied
+2025-08-23_01:19:45.50640                 _._                                                  
+2025-08-23_01:19:45.50722            _.-``__ ''-._                                             
+2025-08-23_01:19:45.50805       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:45.50902   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:45.50969  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:45.51045  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:45.51137  |    `-._   `._    /     _.-'    |     PID: 971
+2025-08-23_01:19:45.51214   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:45.51301  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:45.51369  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:45.51448   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:45.51537  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:45.51647  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:45.51724   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:45.51834       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:45.51924           `-._        _.-'                                           
+2025-08-23_01:19:45.52007               `-.__.-'                                               
+2025-08-23_01:19:45.52106 
+2025-08-23_01:19:45.52186 971:M 23 Aug 2025 01:19:45.488 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:46.50314 981:C 23 Aug 2025 01:19:46.502 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:46.50419 981:C 23 Aug 2025 01:19:46.503 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:46.50463 981:C 23 Aug 2025 01:19:46.503 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=981, just started
+2025-08-23_01:19:46.50504 981:C 23 Aug 2025 01:19:46.503 * Configuration loaded
+2025-08-23_01:19:46.50551 981:M 23 Aug 2025 01:19:46.503 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:46.50592 981:M 23 Aug 2025 01:19:46.504 # Failed to write PID file: Permission denied
+2025-08-23_01:19:46.50640                 _._                                                  
+2025-08-23_01:19:46.50682            _.-``__ ''-._                                             
+2025-08-23_01:19:46.50725       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:46.50766   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:46.50814  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:46.50850  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:46.50890  |    `-._   `._    /     _.-'    |     PID: 981
+2025-08-23_01:19:46.50922   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:46.50952  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:46.50987  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:46.51018   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:46.51050  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:46.51084  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:46.51114   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:46.51147       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:46.51183           `-._        _.-'                                           
+2025-08-23_01:19:46.51214               `-.__.-'                                               
+2025-08-23_01:19:46.51244 
+2025-08-23_01:19:46.51273 981:M 23 Aug 2025 01:19:46.504 # Failed opening Unix socket: bind: Operation not supported
+2025-08-23_01:19:47.51954 1010:C 23 Aug 2025 01:19:47.519 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2025-08-23_01:19:47.52011 1010:C 23 Aug 2025 01:19:47.519 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2025-08-23_01:19:47.52046 1010:C 23 Aug 2025 01:19:47.519 * Redis version=7.2.10, bits=64, commit=5a752e19, modified=0, pid=1010, just started
+2025-08-23_01:19:47.52113 1010:C 23 Aug 2025 01:19:47.519 * Configuration loaded
+2025-08-23_01:19:47.52149 1010:M 23 Aug 2025 01:19:47.519 * monotonic clock: POSIX clock_gettime
+2025-08-23_01:19:47.52214 1010:M 23 Aug 2025 01:19:47.520 # Failed to write PID file: Permission denied
+2025-08-23_01:19:47.52251                 _._                                                  
+2025-08-23_01:19:47.52338            _.-``__ ''-._                                             
+2025-08-23_01:19:47.52400       _.-``    `.  `_.  ''-._           Redis 7.2.10 (5a752e19/0) 64 bit
+2025-08-23_01:19:47.52484   .-`` .-```.  ```\/    _.,_ ''-._                                  
+2025-08-23_01:19:47.52598  (    '      ,       .-`  | `,    )     Running in standalone mode
+2025-08-23_01:19:47.52715  |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+2025-08-23_01:19:47.52792  |    `-._   `._    /     _.-'    |     PID: 1010
+2025-08-23_01:19:47.52854   `-._    `-._  `-./  _.-'    _.-'                                   
+2025-08-23_01:19:47.52921  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:47.53013  |    `-._`-._        _.-'_.-'    |           https://redis.io       
+2025-08-23_01:19:47.53088   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:47.53159  |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+2025-08-23_01:19:47.53232  |    `-._`-._        _.-'_.-'    |                                  
+2025-08-23_01:19:47.53298   `-._    `-._`-.__.-'_.-'    _.-'                                   
+2025-08-23_01:19:47.53364       `-._    `-.__.-'    _.-'                                       
+2025-08-23_01:19:47.53418           `-._        _.-'                                           
+2025-08-23_01:19:47.53481               `-.__.-'                                               
+2025-08-23_01:19:47.53531 
+2025-08-23_01:19:47.53582 1010:M 23 Aug 2025 01:19:47.523 # Failed opening Unix socket: bind: Operation not supported
