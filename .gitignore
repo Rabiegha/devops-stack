@@ -1,9 +1,17 @@
-data/
-.git-credentials
+# Fichiers de configuration sensibles
 .env
-*.log
-node_modules
 
-gitlab/
+# Volumes de données (GitLab, Jenkins, Traefik, etc.)
+data/
+gitlab*/       # ex. gitlab, gitlab.bak.123456
 jenkins/
 traefik/
+
+# Backups
+*.bak
+*.tar
+*.gz
+
+# Logs
+*.log
+logs/
