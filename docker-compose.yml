@@ -75,6 +75,7 @@ services:
     restart: unless-stopped
     user: "0:0"
     environment:
+      - JAVA_OPTS=-Dhudson.security.csrf.CrumbFilter.EXCLUDES=/gitlab-webhook/.*
       - JENKINS_OPTS=--prefix=/
     volumes:
       - ./data/jenkins:/var/jenkins_home
