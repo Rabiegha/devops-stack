@@ -12,7 +12,22 @@ services:
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
+
       - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+
+      # Rediriger HTTP -> HTTPS
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+
+      # ACME/Let's Encrypt (active en prod; en local tu peux commenter)
+      # - "--certificatesresolvers.le.acme.email=${LE_EMAIL}"
+      # - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+
+      # HTTP-01 (simple) :
+      - "--certificatesresolvers.le.acme.httpchallenge=true"
+      - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
+
       - --providers.docker.network=devops-stack_ci_net 
       # Tu peux garder websecure + ACME pour plus tard, mais inutile en .local
       - --api.insecure=true
