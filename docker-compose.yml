@@ -16,27 +16,25 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
 
-      # Rediriger HTTP -> HTTPS
-      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      # Rediriger HTTP -> HTTPS (disabled for registry)
+      # - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      # - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
 
-      # ACME/Let's Encrypt (active en prod; en local tu peux commenter)
-      # - "--certificatesresolvers.le.acme.email=${LE_EMAIL}"
-      # - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
-
-      # HTTP-01 (simple) :
-      - "--certificatesresolvers.le.acme.httpchallenge=true"
-      - "--certificatesresolvers.le.acme.httpchallenge.entrypoint=web"
+      # HTTPS configuration with self-signed certificates
+      - "--providers.file.directory=/etc/traefik/dynamic"
+      - "--providers.file.watch=true"
 
       - --providers.docker.network=devops-stack_ci_net 
       # Tu peux garder websecure + ACME pour plus tard, mais inutile en .local
+      - --log.level=DEBUG
       - --api.insecure=true
       - --entrypoints.web.address=:80 # pour debug
     ports:
       - "80:80"
-      - "8080:8080" # pour debug
+      - "443:443"
     volumes:
       - ./traefik/acme.json:/letsencrypt/acme.json
+      - ./traefik/dynamic:/etc/traefik/dynamic
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks: [ci_net]
 
@@ -49,37 +47,37 @@ services:
     restart: unless-stopped
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://${GITLAB_HOST}'
+        external_url 'https://${GITLAB_HOST}'
         gitlab_rails['gitlab_ssh_host'] = '${GITLAB_HOST}'
         gitlab_rails['gitlab_shell_ssh_port'] = 2222
-        registry_external_url 'http://${REGISTRY_HOST}'
+        registry_external_url 'https://${REGISTRY_HOST}'
         gitlab_rails['registry_enabled'] = true
         registry['enable'] = true
         registry_nginx['listen_port'] = 5050
-        registry_nginx['listen_https'] = false 
+        registry_nginx['listen_https'] = false
+        nginx['listen_port'] = 80
+        nginx['listen_https'] = false
+        gitlab_rails['gitlab_https'] = false 
     ports:
       - "2222:22"   # SSH GitLab (git@...:2222)
-      # (optionnel pour debug direct UI)
-      - "8081:80"
     volumes:
       - gitlab_config:/etc/gitlab
       - gitlab_logs:/var/log/gitlab
       - gitlab_data:/var/opt/gitlab
     labels:
       - "traefik.enable=true"
-      - "traefik.docker.network=devops-stack_ci_net" 
-
-      # Désactive le service auto pour éviter le conflit
-      - "traefik.http.services.gitlab.loadbalancer.server.port=0"
-      # GitLab Web en HTTP (local)
-      - "traefik.http.routers.gitlab.rule=Host(`${GITLAB_HOST}`)"
-      - "traefik.http.routers.gitlab.entrypoints=web"
-      - "traefik.http.routers.gitlab.service=gitlab-web"
+      - "traefik.docker.network=devops-stack_ci_net"
+      # GitLab Web
+      - "traefik.http.routers.gitlab-web.rule=Host(`gitlab.local`)"
+      - "traefik.http.routers.gitlab-web.entrypoints=websecure"
+      - "traefik.http.routers.gitlab-web.tls=true"
+      - "traefik.http.routers.gitlab-web.service=gitlab-web"
       - "traefik.http.services.gitlab-web.loadbalancer.server.port=80"
-      # GitLab Registry en HTTP (local)
-      - "traefik.http.routers.gitlab-reg.rule=Host(`${REGISTRY_HOST}`)"
-      - "traefik.http.routers.gitlab-reg.entrypoints=web"
-      - "traefik.http.routers.gitlab-reg.service=gitlab-registry"
+      # GitLab Registry
+      - "traefik.http.routers.gitlab-registry.rule=Host(`registry.gitlab.local`)"
+      - "traefik.http.routers.gitlab-registry.entrypoints=websecure"
+      - "traefik.http.routers.gitlab-registry.tls=true"
+      - "traefik.http.routers.gitlab-registry.service=gitlab-registry"
       - "traefik.http.services.gitlab-registry.loadbalancer.server.port=5050"
     networks: [ci_net]
 
@@ -99,7 +97,8 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=devops-stack_ci_net" 
       - "traefik.http.routers.jenkins.rule=Host(`${JENKINS_HOST}`)"
-      - "traefik.http.routers.jenkins.entrypoints=web"
+      - "traefik.http.routers.jenkins.entrypoints=websecure"
+      - "traefik.http.routers.jenkins.tls=true"
       - "traefik.http.services.jenkins.loadbalancer.server.port=8080"
     networks: [ci_net]
 
