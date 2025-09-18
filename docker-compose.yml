@@ -1,8 +1,8 @@
 version: "3.9"
 
 networks:
-  ci_net:
-    driver: bridge
+  devops-stack_ci_net:
+    external: true   # crée-le une fois: docker network create devops-stack_ci_net
 
 services:
   traefik:
@@ -12,34 +12,33 @@ services:
     command:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
-
+      # HTTP and HTTPS entrypoints
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
-
-      # Rediriger HTTP -> HTTPS (disabled for registry)
-      # - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-      # - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
-
-      # HTTPS configuration with self-signed certificates
-      - "--providers.file.directory=/etc/traefik/dynamic"
-      - "--providers.file.watch=true"
-
-      - --providers.docker.network=devops-stack_ci_net 
-      # Tu peux garder websecure + ACME pour plus tard, mais inutile en .local
-      - --log.level=DEBUG
+      # Let's Encrypt ACME configuration
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge=true
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.letsencrypt.acme.email=admin@wk-archi-o23b-4-5-g5.online
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      # Très important: indiquer à Traefik sur quel network Docker il découvre/routte
+      - --providers.docker.network=devops-stack_ci_net
+      # Dashboard (expose sur 8080, à protéger si prod)
       - --api.insecure=true
-      - --entrypoints.web.address=:80 # pour debug
+      # Redirect HTTP to HTTPS
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
     ports:
       - "80:80"
       - "443:443"
+      - "8080:8080"
     volumes:
       - ./traefik/acme.json:/letsencrypt/acme.json
       - ./traefik/dynamic:/etc/traefik/dynamic
       - /var/run/docker.sock:/var/run/docker.sock:ro
-    networks: [ci_net]
+    networks: [devops-stack_ci_net]
 
   gitlab:
-    platform: linux/amd64          # indispensable sur Mac Apple Silicon
+    platform: linux/amd64
     shm_size: "1g"
     image: gitlab/gitlab-ce:latest
     container_name: gitlab
@@ -55,11 +54,9 @@ services:
         registry['enable'] = true
         registry_nginx['listen_port'] = 5050
         registry_nginx['listen_https'] = false
-        nginx['listen_port'] = 80
-        nginx['listen_https'] = false
-        gitlab_rails['gitlab_https'] = false 
     ports:
-      - "2222:22"   # SSH GitLab (git@...:2222)
+      - "2222:22"   # SSH GitLab
+      - "8081:80"   # optionnel pour debug direct (sinon supprimer ce publish)
     volumes:
       - gitlab_config:/etc/gitlab
       - gitlab_logs:/var/log/gitlab
@@ -67,19 +64,26 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=devops-stack_ci_net"
-      # GitLab Web
-      - "traefik.http.routers.gitlab-web.rule=Host(`gitlab.local`)"
-      - "traefik.http.routers.gitlab-web.entrypoints=websecure"
-      - "traefik.http.routers.gitlab-web.tls=true"
-      - "traefik.http.routers.gitlab-web.service=gitlab-web"
+
+      # Désactiver le service auto par défaut
+      - "traefik.http.services.gitlab.loadbalancer.server.port=0"
+
+      # GitLab Web (HTTPS with Let's Encrypt)
+      - "traefik.http.routers.gitlab.rule=Host(`${GITLAB_HOST}`)"
+      - "traefik.http.routers.gitlab.entrypoints=websecure"
+      - "traefik.http.routers.gitlab.service=gitlab-web"
+      - "traefik.http.routers.gitlab.tls=true"
+      - "traefik.http.routers.gitlab.tls.certresolver=letsencrypt"
       - "traefik.http.services.gitlab-web.loadbalancer.server.port=80"
-      # GitLab Registry
-      - "traefik.http.routers.gitlab-registry.rule=Host(`registry.gitlab.local`)"
-      - "traefik.http.routers.gitlab-registry.entrypoints=websecure"
-      - "traefik.http.routers.gitlab-registry.tls=true"
-      - "traefik.http.routers.gitlab-registry.service=gitlab-registry"
+
+      # GitLab Registry (HTTPS with Let's Encrypt)
+      - "traefik.http.routers.gitlab-reg.rule=Host(`${REGISTRY_HOST}`)"
+      - "traefik.http.routers.gitlab-reg.entrypoints=websecure"
+      - "traefik.http.routers.gitlab-reg.service=gitlab-registry"
+      - "traefik.http.routers.gitlab-reg.tls=true"
+      - "traefik.http.routers.gitlab-reg.tls.certresolver=letsencrypt"
       - "traefik.http.services.gitlab-registry.loadbalancer.server.port=5050"
-    networks: [ci_net]
+    networks: [devops-stack_ci_net]
 
   jenkins:
     platform: linux/amd64
@@ -95,12 +99,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - "traefik.enable=true"
-      - "traefik.docker.network=devops-stack_ci_net" 
+      - "traefik.docker.network=devops-stack_ci_net"
       - "traefik.http.routers.jenkins.rule=Host(`${JENKINS_HOST}`)"
       - "traefik.http.routers.jenkins.entrypoints=websecure"
       - "traefik.http.routers.jenkins.tls=true"
+      - "traefik.http.routers.jenkins.tls.certresolver=letsencrypt"
       - "traefik.http.services.jenkins.loadbalancer.server.port=8080"
-    networks: [ci_net]
+    networks: [devops-stack_ci_net]
 
 volumes:
   gitlab_config:
