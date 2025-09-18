@@ -1,0 +1,22 @@
+version: "2"
+authtoken: 32t88Glu47H1OKBZLfTeARyCgbI_G9ckRpPQDPg1Ltogq33o
+
+tunnels:
+  gitlab:
+    addr: http://localhost:8081
+    proto: http
+    schemes:
+      - https
+    host_header: localhost:8081
+    
+  jenkins:
+    addr: http://localhost:8080
+    proto: http
+    schemes:
+      - https
+    
+  traefik:
+    addr: http://localhost:80
+    proto: http
+    schemes:
+      - https

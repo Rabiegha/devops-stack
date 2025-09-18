@@ -1,0 +1,3 @@
+TRAEFIK: https://465e6f9b5993.ngrok-free.app
+JENKINS: https://f8e21035627e.ngrok-free.app
+GITLAB: https://457d8d02d983.ngrok-free.app

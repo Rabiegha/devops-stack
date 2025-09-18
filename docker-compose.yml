@@ -30,7 +30,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
+      - "8090:8080"   # Dashboard Traefik sur port 8090
     volumes:
       - ./traefik/acme.json:/letsencrypt/acme.json
       - ./traefik/dynamic:/etc/traefik/dynamic
@@ -46,14 +46,14 @@ services:
     restart: unless-stopped
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://${GITLAB_HOST}'
-        gitlab_rails['gitlab_ssh_host'] = '${GITLAB_HOST}'
+        external_url 'http://localhost:8081'
+        gitlab_rails['gitlab_ssh_host'] = 'localhost'
         gitlab_rails['gitlab_shell_ssh_port'] = 2222
-        registry_external_url 'https://${REGISTRY_HOST}'
-        gitlab_rails['registry_enabled'] = true
-        registry['enable'] = true
-        registry_nginx['listen_port'] = 5050
-        registry_nginx['listen_https'] = false
+        # Configuration minimale pour forcer HTTP
+        nginx['listen_port'] = 80
+        nginx['listen_https'] = false
+        nginx['redirect_http_to_https'] = false
+        nginx['hsts_max_age'] = 0
     ports:
       - "2222:22"   # SSH GitLab
       - "8081:80"   # optionnel pour debug direct (sinon supprimer ce publish)
@@ -94,6 +94,8 @@ services:
     environment:
       - JAVA_OPTS=-Dhudson.security.csrf.CrumbFilter.EXCLUDES=/gitlab-webhook/.*
       - JENKINS_OPTS=--prefix=/
+    ports:
+      - "8080:8080"   # Exposition directe de Jenkins
     volumes:
       - ./data/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
