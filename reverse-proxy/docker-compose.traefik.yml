@@ -1,0 +1,74 @@
+version: "3.9"
+
+networks:
+  web:
+    external: true  # Réseau créé par networks/create_networks.sh
+
+services:
+  traefik:
+    image: traefik:v2.11
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      # Configuration Docker provider
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.network=web
+      
+      # Points d'entrée HTTP et HTTPS
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      
+      # Configuration Let's Encrypt ACME
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge=true
+      - --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL:-admin@example.com}
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      
+      # Dashboard Traefik (à sécuriser en production)
+      - --api.insecure=true
+      
+      # Redirection HTTP vers HTTPS (décommentez pour activer)
+      # - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      # - --entrypoints.web.http.redirections.entrypoint.scheme=https
+      
+      # Configuration des logs
+      - --log.level=INFO
+      - --accesslog=true
+      
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8090:8080"   # Dashboard Traefik
+      
+    volumes:
+      # Socket Docker pour la découverte automatique
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      
+      # Stockage des certificats Let's Encrypt
+      - ./traefik/acme.json:/letsencrypt/acme.json
+      
+      # Configuration dynamique (optionnel)
+      - ./traefik/dynamic:/etc/traefik/dynamic:ro
+      
+    networks:
+      - web
+      
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      
+      # Dashboard Traefik (sécurisez en production avec auth)
+      - "traefik.http.routers.traefik.rule=Host(`traefik.${DOMAIN:-localhost}`)"
+      - "traefik.http.routers.traefik.entrypoints=web"
+      - "traefik.http.routers.traefik.service=api@internal"
+      
+      # Version HTTPS du dashboard (décommentez si nécessaire)
+      # - "traefik.http.routers.traefik-secure.rule=Host(`traefik.${DOMAIN:-localhost}`)"
+      # - "traefik.http.routers.traefik-secure.entrypoints=websecure"
+      # - "traefik.http.routers.traefik-secure.tls=true"
+      # - "traefik.http.routers.traefik-secure.tls.certresolver=letsencrypt"
+      # - "traefik.http.routers.traefik-secure.service=api@internal"
+      
+    environment:
+      - TRAEFIK_LOG_LEVEL=INFO

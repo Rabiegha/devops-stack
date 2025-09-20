@@ -1,0 +1,67 @@
+version: "3.9"
+
+networks:
+  quality-network:
+    driver: bridge
+  devops-stack_ci_net:
+    external: true  # Pour communiquer avec Jenkins
+
+services:
+  sonarqube:
+    image: sonarqube:10.3-community
+    container_name: sonarqube
+    hostname: sonarqube.local
+    restart: unless-stopped
+    environment:
+      # Configuration de base
+      - SONAR_JDBC_URL=jdbc:postgresql://sonarqube-db:5432/sonar
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar_password
+      # Configuration pour éviter les erreurs de mémoire
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+      # Configuration réseau
+      - SONAR_WEB_HOST=0.0.0.0
+      - SONAR_WEB_PORT=9000
+    ports:
+      - "9000:9000"  # Interface web SonarQube
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_temp:/opt/sonarqube/temp
+    depends_on:
+      - sonarqube-db
+    networks:
+      - quality-network
+      - devops-stack_ci_net  # Pour que Jenkins puisse y accéder
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=devops-stack_ci_net"
+      - "traefik.http.routers.sonarqube.rule=Host(`sonarqube.local`)"
+      - "traefik.http.routers.sonarqube.entrypoints=web"
+      - "traefik.http.services.sonarqube.loadbalancer.server.port=9000"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+      nproc: 4096
+
+  sonarqube-db:
+    image: postgres:15-alpine
+    container_name: sonarqube-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar_password
+      - POSTGRES_DB=sonar
+    volumes:
+      - sonarqube_db:/var/lib/postgresql/data
+    networks:
+      - quality-network
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  sonarqube_temp:
+  sonarqube_db:
