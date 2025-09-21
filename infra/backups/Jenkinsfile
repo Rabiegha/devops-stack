@@ -48,11 +48,14 @@ pipeline {
                         echo "Vérification des conteneurs..."
                         docker ps --format "table {{.Names}}\\t{{.Status}}" | grep -E "(minio|restic-runner)"
                         
-                        echo "Vérification de l'espace disque..."
-                        df -h /var/lib/docker
+                        echo "Vérification de l'espace disque disponible..."
+                        df -h /tmp
                         
                         echo "Vérification de la connectivité MinIO..."
-                        curl -f http://${MINIO_API_HOST}/minio/health/live || echo "ATTENTION: MinIO non accessible"
+                        curl -f --max-time 10 http://${MINIO_API_HOST}/minio/health/live || echo "ATTENTION: MinIO non accessible via health endpoint"
+                        
+                        echo "Test de connectivité MinIO alternative..."
+                        curl -f --max-time 10 http://${MINIO_API_HOST}/ || echo "ATTENTION: MinIO non accessible via endpoint principal"
                     '''
                 }
             }
