@@ -104,6 +104,8 @@ services:
     environment:
       - JAVA_OPTS=-Dhudson.security.csrf.CrumbFilter.EXCLUDES=/gitlab-webhook/.*
       - JENKINS_OPTS=--prefix=/
+      - NO_PROXY=registry.gitlab.local,gitlab.local,jenkins.local,localhost,127.0.0.1
+      - no_proxy=registry.gitlab.local,gitlab.local,jenkins.local,localhost,127.0.0.1
     ports:
       - "8080:8080"   # Exposition directe de Jenkins
     volumes:
