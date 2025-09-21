@@ -161,12 +161,12 @@ services:
   restic-runner:
     image: restic/restic:latest
     container_name: restic-runner
-    entrypoint: ["sleep", "infinity"]
+    entrypoint: ["sh", "-c", "apk add --no-cache bash curl jq && sleep infinity"]
     restart: unless-stopped
     networks: [devops-stack_ci_net]
     environment:
       # Repository S3 MinIO
-      RESTIC_REPOSITORY: s3:http://${MINIO_API_HOST}/${MINIO_BACKUP_BUCKET}
+      RESTIC_REPOSITORY: s3:http://minio:9000/${MINIO_BACKUP_BUCKET}
       # Ces variables seront overridées par Jenkins via withCredentials
       AWS_ACCESS_KEY_ID: ${MINIO_ACCESS_KEY}
       AWS_SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY}

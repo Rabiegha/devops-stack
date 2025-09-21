@@ -77,6 +77,22 @@ restic backup \
     --host "$HOSTNAME_TAG" \
     --verbose
 
+# Capturer le code de sortie de restic backup
+BACKUP_EXIT_CODE=$?
+
+# Restic exit codes:
+# 0 = success, no warnings
+# 3 = success with warnings (some files couldn't be read)
+# other = actual error
+if [ $BACKUP_EXIT_CODE -eq 0 ]; then
+    echo "[backup] Sauvegarde terminée avec succès"
+elif [ $BACKUP_EXIT_CODE -eq 3 ]; then
+    echo "[backup] Sauvegarde terminée avec succès (quelques fichiers n'ont pas pu être lus - normal pour un système en cours d'exécution)"
+else
+    echo "[backup] ERREUR: Échec de la sauvegarde (code de sortie: $BACKUP_EXIT_CODE)"
+    exit $BACKUP_EXIT_CODE
+fi
+
 echo "[backup] Application de la politique de rétention..."
 restic forget \
     --group-by host,tags \
@@ -134,3 +150,6 @@ EOF
 fi
 
 echo "[backup] $(date '+%Y-%m-%d %H:%M:%S') - Sauvegarde terminée avec succès en ${BACKUP_DURATION}s"
+
+# Assurer que le script se termine avec succès même si restic a retourné des warnings
+exit 0
