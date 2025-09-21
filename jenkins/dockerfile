@@ -1,0 +1,44 @@
+FROM jenkins/jenkins:lts-jdk17
+
+USER root
+RUN apt-get update && apt-get install -y \
+    docker.io \
+    docker-compose \
+    iputils-ping \
+    netcat-openbsd \
+    openssh-client \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configure Docker daemon to bypass proxy for local registry
+RUN mkdir -p /etc/docker && \
+    echo '{"registry-mirrors": [], "insecure-registries": ["registry.gitlab.local"], "no-proxy": "registry.gitlab.local,gitlab.local,jenkins.local,localhost,127.0.0.1"}' > /etc/docker/daemon.json
+
+# Install Docker Compose v2 (newer version) as well
+RUN curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
+    && chmod +x /usr/local/bin/docker-compose \
+    && rm -f /usr/bin/docker-compose \
+    && ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+USER jenkins
+
+# Set environment variables to disable proxy for local services
+ENV NO_PROXY="registry.gitlab.local,gitlab.local,jenkins.local,localhost,127.0.0.1"
+ENV no_proxy="registry.gitlab.local,gitlab.local,jenkins.local,localhost,127.0.0.1"
+
+# Install plugins WITHOUT GitLab-specific ones to avoid Jackson conflicts
+# We'll use Git plugin with webhooks instead of GitLab integration
+RUN jenkins-plugin-cli --plugins \
+  git \
+  workflow-aggregator \
+  workflow-multibranch \
+  credentials \
+  ssh-credentials \
+  plain-credentials
+
+# Skip initial setup wizard
+ENV JAVA_OPTS="-Djenkins.install.runSetupWizard=false"
+
+# Create initial admin user (change these credentials!)
+ENV JENKINS_USER=admin
+ENV JENKINS_PASS=admin123
