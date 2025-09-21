@@ -1,0 +1,234 @@
+pipeline {
+    agent any
+    
+    options {
+        timestamps()
+        ansiColor('xterm')
+        timeout(time: 2, unit: 'HOURS')
+        buildDiscarder(logRotator(numToKeepStr: '30'))
+    }
+
+    environment {
+        RESTIC_REPOSITORY = "s3:http://${MINIO_API_HOST}/${MINIO_BACKUP_BUCKET}"
+        BACKUP_HOSTNAME = "workflow-prod-01"
+        PUSHGATEWAY_URL = "http://${PUSHGATEWAY_HOST}"
+    }
+
+    parameters {
+        booleanParam(
+            name: 'RUN_RESTORE_TEST', 
+            defaultValue: false, 
+            description: 'Exécuter un test de restauration après la sauvegarde'
+        )
+        choice(
+            name: 'BACKUP_TYPE',
+            choices: ['daily', 'manual', 'full'],
+            description: 'Type de sauvegarde à effectuer'
+        )
+        string(
+            name: 'RESTORE_PATH',
+            defaultValue: '/backup/jenkins/jobs',
+            description: 'Chemin à restaurer pour le test (si activé)'
+        )
+    }
+
+    triggers {
+        // Sauvegarde quotidienne à 2h du matin (heure aléatoire pour éviter la surcharge)
+        cron('H 2 * * *')
+    }
+
+    stages {
+        stage('Pre-backup Checks') {
+            steps {
+                script {
+                    echo "🔍 Vérification de l'environnement de sauvegarde..."
+                    
+                    // Vérifier que les conteneurs nécessaires sont en cours d'exécution
+                    sh '''
+                        echo "Vérification des conteneurs..."
+                        docker ps --format "table {{.Names}}\\t{{.Status}}" | grep -E "(minio|restic-runner)"
+                        
+                        echo "Vérification de l'espace disque..."
+                        df -h /var/lib/docker
+                        
+                        echo "Vérification de la connectivité MinIO..."
+                        curl -f http://${MINIO_API_HOST}/minio/health/live || echo "ATTENTION: MinIO non accessible"
+                    '''
+                }
+            }
+        }
+
+        stage('Backup Workflow') {
+            steps {
+                script {
+                    echo "🚀 Démarrage de la sauvegarde ${params.BACKUP_TYPE}..."
+                }
+                
+                withCredentials([
+                    file(credentialsId: 'restic-password-file', variable: 'RESTIC_PASSWORD_FILE'),
+                    string(credentialsId: 'minio-access-key', variable: 'AWS_ACCESS_KEY_ID'),
+                    string(credentialsId: 'minio-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                ]) {
+                    sh '''
+                        # Export des variables d'environnement pour le conteneur
+                        export BACKUP_START_TIME=$(date +%s)
+                        
+                        echo "📦 Exécution de la sauvegarde dans le conteneur restic-runner..."
+                        docker exec \
+                            -e RESTIC_REPOSITORY \
+                            -e AWS_ACCESS_KEY_ID \
+                            -e AWS_SECRET_ACCESS_KEY \
+                            -e BACKUP_HOSTNAME \
+                            -e PUSHGATEWAY_URL \
+                            -e RESTIC_PASSWORD_FILE=/secrets/restic_password \
+                            restic-runner sh -c '
+                                # Création du fichier de mot de passe
+                                mkdir -p /secrets
+                                echo "'"$RESTIC_PASSWORD"'" > /secrets/restic_password
+                                chmod 600 /secrets/restic_password
+                                
+                                # Exécution du script de sauvegarde
+                                /backup-scripts/backup.sh
+                            '
+                        
+                        echo "✅ Sauvegarde terminée avec succès"
+                    '''
+                }
+            }
+            
+            post {
+                failure {
+                    script {
+                        echo "❌ Échec de la sauvegarde"
+                        // Envoyer une métrique d'échec
+                        withCredentials([
+                            string(credentialsId: 'minio-access-key', variable: 'AWS_ACCESS_KEY_ID'),
+                            string(credentialsId: 'minio-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                        ]) {
+                            sh '''
+                                docker exec \
+                                    -e PUSHGATEWAY_URL \
+                                    -e BACKUP_HOSTNAME \
+                                    restic-runner sh -c '
+                                        if [ -n "${PUSHGATEWAY_URL}" ]; then
+                                            echo "restic_backup_success 0" | curl --data-binary @- "${PUSHGATEWAY_URL}/metrics/job/restic_backup/instance/${BACKUP_HOSTNAME}" --max-time 10 --silent || true
+                                        fi
+                                    '
+                            '''
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Backup Verification') {
+            steps {
+                script {
+                    echo "🔍 Vérification de la sauvegarde..."
+                }
+                
+                withCredentials([
+                    file(credentialsId: 'restic-password-file', variable: 'RESTIC_PASSWORD_FILE'),
+                    string(credentialsId: 'minio-access-key', variable: 'AWS_ACCESS_KEY_ID'),
+                    string(credentialsId: 'minio-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                ]) {
+                    sh '''
+                        echo "📊 Affichage des snapshots récents..."
+                        docker exec \
+                            -e RESTIC_REPOSITORY \
+                            -e AWS_ACCESS_KEY_ID \
+                            -e AWS_SECRET_ACCESS_KEY \
+                            -e RESTIC_PASSWORD_FILE=/secrets/restic_password \
+                            restic-runner sh -c '
+                                echo "'"$RESTIC_PASSWORD"'" > /secrets/restic_password
+                                chmod 600 /secrets/restic_password
+                                
+                                echo "=== Snapshots récents ==="
+                                restic snapshots --compact | tail -10
+                                
+                                echo "=== Statistiques du repository ==="
+                                restic stats --mode raw-data
+                            '
+                    '''
+                }
+            }
+        }
+
+        stage('Restore Test') {
+            when {
+                expression { return params.RUN_RESTORE_TEST == true }
+            }
+            steps {
+                script {
+                    echo "🔄 Test de restauration..."
+                }
+                
+                withCredentials([
+                    file(credentialsId: 'restic-password-file', variable: 'RESTIC_PASSWORD_FILE'),
+                    string(credentialsId: 'minio-access-key', variable: 'AWS_ACCESS_KEY_ID'),
+                    string(credentialsId: 'minio-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')
+                ]) {
+                    sh '''
+                        echo "🧪 Test de restauration du chemin: ${RESTORE_PATH}"
+                        docker exec \
+                            -e RESTIC_REPOSITORY \
+                            -e AWS_ACCESS_KEY_ID \
+                            -e AWS_SECRET_ACCESS_KEY \
+                            -e RESTIC_PASSWORD_FILE=/secrets/restic_password \
+                            restic-runner sh -c '
+                                echo "'"$RESTIC_PASSWORD"'" > /secrets/restic_password
+                                chmod 600 /secrets/restic_password
+                                
+                                # Nettoyage du répertoire de test
+                                rm -rf /restore-test
+                                mkdir -p /restore-test
+                                
+                                # Test de restauration
+                                /backup-scripts/restore.sh /restore-test "'"${RESTORE_PATH}"'" latest
+                                
+                                echo "=== Contenu restauré ==="
+                                find /restore-test -type f | head -10
+                                echo "Total fichiers restaurés: $(find /restore-test -type f | wc -l)"
+                                
+                                # Nettoyage
+                                rm -rf /restore-test
+                            '
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            script {
+                echo "🧹 Nettoyage post-sauvegarde..."
+                // Nettoyage des fichiers temporaires si nécessaire
+            }
+        }
+        
+        success {
+            script {
+                echo "✅ Pipeline de sauvegarde terminé avec succès"
+                // Notification de succès (Slack, email, etc.)
+            }
+        }
+        
+        failure {
+            script {
+                echo "❌ Échec du pipeline de sauvegarde"
+                // Notification d'échec (Slack, email, etc.)
+            }
+        }
+        
+        cleanup {
+            script {
+                // Nettoyage final
+                sh '''
+                    # Nettoyage des secrets temporaires dans le conteneur
+                    docker exec restic-runner sh -c 'rm -rf /secrets /restore-test' || true
+                '''
+            }
+        }
+    }
+}

@@ -121,7 +121,92 @@ services:
       - "traefik.http.services.jenkins.loadbalancer.server.port=8080"
     networks: [devops-stack_ci_net]
 
+  # MinIO (S3 compatible storage)
+  minio:
+    image: minio/minio:RELEASE.2024-09-13T20-26-02Z
+    container_name: minio
+    command: server /data --console-address ":9001"
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio_data:/data
+    networks: [devops-stack_ci_net]
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=devops-stack_ci_net"
+      
+      # API S3
+      - "traefik.http.routers.minio.rule=Host(`${MINIO_API_HOST}`)"
+      - "traefik.http.routers.minio.entrypoints=web"
+      - "traefik.http.routers.minio.service=minio-api"
+      - "traefik.http.services.minio-api.loadbalancer.server.port=9000"
+      
+      # Console MinIO
+      - "traefik.http.routers.minio-console.rule=Host(`${MINIO_CONSOLE_HOST}`)"
+      - "traefik.http.routers.minio-console.entrypoints=web"
+      - "traefik.http.routers.minio-console.service=minio-console"
+      - "traefik.http.services.minio-console.loadbalancer.server.port=9001"
+    depends_on:
+      - traefik
+
+  # Runner Restic (utilisé par Jenkins via docker exec)
+  restic-runner:
+    image: restic/restic:latest
+    container_name: restic-runner
+    entrypoint: ["sleep", "infinity"]
+    restart: unless-stopped
+    networks: [devops-stack_ci_net]
+    environment:
+      # Repository S3 MinIO
+      RESTIC_REPOSITORY: s3:http://${MINIO_API_HOST}/${MINIO_BACKUP_BUCKET}
+      # Ces variables seront overridées par Jenkins via withCredentials
+      AWS_ACCESS_KEY_ID: ${MINIO_ACCESS_KEY}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_SECRET_KEY}
+    volumes:
+      - restic_cache:/root/.cache/restic
+      # Montages en lecture seule pour les données à sauvegarder
+      - ./data/gitlab:/backup/gitlab:ro
+      - ./data/jenkins:/backup/jenkins:ro
+      - gitlab_data:/backup/gitlab_data:ro
+      - gitlab_config:/backup/gitlab_config:ro
+      - gitlab_logs:/backup/gitlab_logs:ro
+      # Scripts de backup
+      - ./infra/backups:/backup-scripts:ro
+    healthcheck:
+      test: ["CMD", "restic", "version"]
+      interval: 1m
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    depends_on:
+      - minio
+
+  # Pushgateway pour les métriques Prometheus
+  pushgateway:
+    image: prom/pushgateway:latest
+    container_name: pushgateway
+    restart: unless-stopped
+    networks: [devops-stack_ci_net]
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=devops-stack_ci_net"
+      - "traefik.http.routers.pushgw.rule=Host(`${PUSHGATEWAY_HOST}`)"
+      - "traefik.http.routers.pushgw.entrypoints=web"
+      - "traefik.http.services.pushgw.loadbalancer.server.port=9091"
+    depends_on:
+      - traefik
+
 volumes:
   gitlab_config:
   gitlab_logs:
   gitlab_data:
+  minio_data:
+  restic_cache:
